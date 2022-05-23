@@ -1,0 +1,40 @@
+user tutorials  examples
+tips: this is only recommended Linux and Mac OS. In windows, you could download the .exe installation package we provided.
+1. Download the source file for you operation system. and unzip it to a folder.  You folder tree looks like:
+---|
+    --- pynanolab
+    --- main.py
+    --- requirements.txt
+    --- run.sh
+Then entrance this folder, the main.py is the entrance file of PyNanoLab
+
+2. build the pynanolab runtime environment
+
+    1). Download the miniconda and install.
+        Download url: https://docs.conda.io/en/latest/miniconda.html
+
+    2). Create the virtualenv for PyNanoLab
+        use following command in terminal:
+
+            conda create -n pnl python=3.10.4 -c conda-forge
+            source activate # only needed in windows system when you use the git-bash for windows.
+            conda activate pnl
+
+        # if you want use intel-mkl based numpy to speed up the PyNanoLab:
+
+            conda install numpy
+        To install the numpy-mkl,
+        And Then:
+
+            pip install -r requirements.txt
+
+        # tips: for some requirement,you should have compiler in your system to build the package.
+        # in windows: Visual Studio; Linux: GCC ; Mac OS X： Xcode.
+
+    3). Run the PyNanoLab:
+        # use following command in terminal:
+
+            conda activate pnl
+            python main.py
+
+        # or just double click the file 'run.sh'.

@@ -1,4 +1,4 @@
-## PyNanoLab is an all in one GUI software for nanopore data analysis. It is also a free alternatives software for OrignaLab，
+## PyNanoLab is an all in one GUI software for data analysis and visualization. It is also a free alternatives software for OrignaLab，
 ### Installition
 Briefly， you could download the binary installer we have already builded for your operation system from [Here](https://sourceforge.net/projects/pynano/files/).
 #### Source install tutorial
@@ -13,7 +13,7 @@ tips: this is only recommended Linux and Mac OS. In windows, you could download 
 ##### 2. build the pynanolab runtime environment
     use following command in terminal:         
 ``` sh  
-    conda create -n pnl python=3.10.4 -c conda-forge    
+    conda create -n pnl python=3.10.8   
     source activate # only needed in windows system when you use the git-bash for windows.  
     conda activate pnl      
 ```   
@@ -59,8 +59,8 @@ PyNanoLab contains a variety of tools to complete the data analysis, statistics,
 - Interactive parameter setting
 - Real-time visualization    
 ![image](https://user-images.githubusercontent.com/28666678/165077568-f5597b79-bd2f-4ddd-a34a-b4f18f035280.png)
-## Manual Analysis
-- Custom signal analysis
+## Nanopore ToolBox
+- Custom and Auto signal analysis
 - Time-Frequency spectral analysis
 - Signal batch processing  
 ![image](https://user-images.githubusercontent.com/28666678/165077633-a98d7d88-f3ec-4ecc-8787-be1238501ee5.png)

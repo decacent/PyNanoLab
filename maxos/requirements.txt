@@ -6,7 +6,7 @@ sympy
 requests
 PyWaveLets
 lmfit
-PySide6==6.2.3
+PySide6
 pandas
 seaborn
 openpyxl
@@ -25,3 +25,5 @@ statsmodels
 pybaselines
 hdbscan
 untangle
+deepdiff
+configobj

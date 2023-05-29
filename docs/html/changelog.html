@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pynanolab.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="ChangelogLatest Version 2.3.0 Changelog:  Added: Nanopore ToolBox. Added: 3D figure support. Bug fixed: fixed the Bug previous version.  Version:2.2.0 Changelog:  Added: Princeton Instruments LightFie">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyNanoLab">
+<meta property="og:url" content="http://pynanolab.com/html/changelog.html">
+<meta property="og:site_name" content="PyNanoLab">
+<meta property="og:description" content="ChangelogLatest Version 2.3.0 Changelog:  Added: Nanopore ToolBox. Added: 3D figure support. Bug fixed: fixed the Bug previous version.  Version:2.2.0 Changelog:  Added: Princeton Instruments LightFie">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-29T05:13:54.063Z">
+<meta property="article:modified_time" content="2023-05-29T05:13:54.063Z">
+<meta property="article:author" content="Shaochuang Liu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://pynanolab.com/html/changelog">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://pynanolab.com/html/changelog.html","path":"html/changelog.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | PyNanoLab
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/images/logo.png" alt="PyNanoLab">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PyNanoLab</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-installation"><a href="/html/install" rel="section"><i class="fa fa-download fa-fw"></i>Installation</a></li><li class="menu-item menu-item-blog"><a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Blog</a></li><li class="menu-item menu-item-changelog"><a href="/html/changelog" rel="section"><i class="fa fa-undo fa-fw"></i>Changelog</a></li><li class="menu-item menu-item-about"><a href="/html/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Changelog"><span class="nav-number">1.</span> <span class="nav-text">Changelog</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Shaochuang Liu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/decacent/PyNanoLab" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;decacent&#x2F;PyNanoLab" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p><strong>Latest Version 2.3.0</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Added: Nanopore ToolBox.</li>
+<li>Added: 3D figure support.</li>
+<li>Bug fixed: fixed the Bug previous version.</li>
+</ul>
+<p><strong>Version:2.2.0</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Added: Princeton Instruments LightField .spe file format support.</li>
+<li>Added: ignore the small time step in multistagepnl analysis by setting limit time.</li>
+<li>Bug fixed: fixed the signal lose in siglestaepAdeapt2 method.</li>
+</ul>
+<p><strong>Version:2.1.4</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: fixed bug in preversion</li>
+<li>Added: baseline remove</li>
+</ul>
+<p><strong>Version:2.1.3</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: fixed bug in preversion</li>
+<li>optimization ：improve the performance of table and data view.</li>
+<li>Added: stack plot, sheet merge&#x2F;concat.</li>
+<li>Added: denoise.</li>
+<li>Warring: sample Data and fig setup in previous version is not ompatible in this version.</li>
+</ul>
+<p><strong>Version:2.1.2</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: fixed bug in v2.1.0</li>
+<li>optimization ：improve the performance of table.</li>
+<li>Added: kdeplot，violin plot， heatmap plot.</li>
+</ul>
+<p><strong>Version:2.1.0</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: fixed bug in v2.0.3.</li>
+<li>Bug fixed: the std and charge error in nanopore analysis adept2 model.</li>
+<li>new feature: Data normalization， pivot， unpivot, copy&#x2F;paste.</li>
+<li>new feature: change the figure parm set widget.</li>
+<li>Added: line + hist figure, line shareX figure, line twinxy figure, scatter + hist +kde figure, time series hist figure, regplot figure.</li>
+</ul>
+<p><strong>Version:2.0.3</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: fixed bug in v2.0.2.</li>
+<li>new feature: Data normalization.</li>
+<li>Linux version released.</li>
+</ul>
+<p><strong>Version:2.0.2</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Bug fixed: read .ini file failed.</li>
+<li>Bug fixed: cluster apply failed.</li>
+<li>Added : countour, contourf, imshow plot.</li>
+<li>Added: seaborn distribution plot.</li>
+<li>new feature: drag move columns.</li>
+</ul>
+<p><strong>Version:2.0.1</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Upgrade python to 3.10.2, Matplotlib to 3.5.1</li>
+<li>Bug fixed.</li>
+<li>Added : delete the data ranged in the cursor.</li>
+<li>Added: table analysis log.</li>
+<li>Added: Simple statics analysis in Table.</li>
+<li>Added: new figure, stacked line plot with Y offset.</li>
+<li>Added: new figure, violinplot (uncomplete)</li>
+</ul>
+<p><strong>Version:2.0.0</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>Overall Model-View framework.</li>
+<li>Redesign the PNL project file, speed up the file write and read. Better applicability. But incompatible with PNL version 1.x.</li>
+<li>Upgrade python to 3.10.1, Qt to PySide6, Matplotlib to 3.5.</li>
+<li>Optimize the signal analysis app.</li>
+<li>Add Manual analysis app.</li>
+<li>Add the .pnlfig, .pnltb, and .pnldata format.</li>
+<li>Bug fixed.</li>
+</ul>
+<p><strong>Version:1.0.2</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>change the action of data smooth and denoise. You can set up smooth data by your self.</li>
+</ul>
+<p><strong>Version:1.0.1</strong></p>
+<p>Changelog:</p>
+<ul>
+<li>fix bug that view fitted signal.</li>
+<li>fix bug save project.</li>
+<li>fix bug add new folder.</li>
+<li>fix the time error of multistepKmeans method.</li>
+<li>add check update action.</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shaochuang Liu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

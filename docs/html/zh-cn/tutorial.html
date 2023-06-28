@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pynanolab.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="English Versin PyNanoLab软件操作手册1. 简介PyNanoLab是一个使用PySide6框架结合Python的科学计算生态构建的用户界面(GUI)软件。它旨在提供一个跨平台、现代化和易于操作的界面，用于数据的分析处理和数据的可视化。PyNanoLab从最初的用于纳米孔道离子电流信号的分析工具，逐渐发展为科学数据分析的综合性软件。 PyNanoLab 主要有以下几个主要特性:">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyNanoLab">
+<meta property="og:url" content="http://pynanolab.com/html/zh-cn/tutorial.html">
+<meta property="og:site_name" content="PyNanoLab">
+<meta property="og:description" content="English Versin PyNanoLab软件操作手册1. 简介PyNanoLab是一个使用PySide6框架结合Python的科学计算生态构建的用户界面(GUI)软件。它旨在提供一个跨平台、现代化和易于操作的界面，用于数据的分析处理和数据的可视化。PyNanoLab从最初的用于纳米孔道离子电流信号的分析工具，逐渐发展为科学数据分析的综合性软件。 PyNanoLab 主要有以下几个主要特性:">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/image3-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reset_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/psd_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/export_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/E-matlab_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/detrend_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reverse_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/histogram_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/dropdate_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/concat_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/arrowsbirection_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor1_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor2_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/scale_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/extract_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/denoise_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/fillter_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/baseline_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/baseline_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/splets_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/nanopore_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-2.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-6.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-7.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-8.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/import_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/save-file-option_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/export_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/lineview_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/corr_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/scale_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/extract_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-5.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/manual_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-6.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reset_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/clear_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/infochart_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/psd_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/stft_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/splets_blue.svg">
+<meta property="article:published_time" content="2023-06-28T12:36:22.194Z">
+<meta property="article:modified_time" content="2023-06-28T12:36:22.194Z">
+<meta property="article:author" content="Shaochuang Liu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pynanolab.com/images/ugimgs/image3-1.png">
+
+
+<link rel="canonical" href="http://pynanolab.com/html/zh-cn/tutorial">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://pynanolab.com/html/zh-cn/tutorial.html","path":"html/zh-cn/tutorial.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | PyNanoLab
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/images/logo.png" alt="PyNanoLab">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PyNanoLab</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-installation"><a href="/html/install" rel="section"><i class="fa fa-download fa-fw"></i>Installation</a></li><li class="menu-item menu-item-tutorial"><a href="/html/en-us/tutorial" rel="section"><i class="fa fa-download fa-fw"></i>Tutorial</a></li><li class="menu-item menu-item-blog"><a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Blog</a></li><li class="menu-item menu-item-changelog"><a href="/html/changelog" rel="section"><i class="fa fa-undo fa-fw"></i>Changelog</a></li><li class="menu-item menu-item-about"><a href="/html/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PyNanoLab%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C"><span class="nav-text">PyNanoLab软件操作手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="nav-text">1. 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85"><span class="nav-text">2. 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="nav-text">2.1 系统要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-text">2.2 软件安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text">3. 基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%95%8C%E9%9D%A2%E5%AF%BC%E8%A7%88"><span class="nav-text">3.1 界面导览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">3.1.1 项目管理器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-%E5%A4%9A%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">3.1.2 多窗口管理器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-text">3.2 项目的管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Data%E6%A8%A1%E5%9D%97"><span class="nav-text">4. Data模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E9%87%87%E6%A0%B7%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-text">4.1 采样数据的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%85%89%E8%B0%B1%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-text">4.2 光谱数据的处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Table%E6%A8%A1%E5%9D%97"><span class="nav-text">5. Table模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">6. 数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-text">7. 工具箱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E7%BA%B3%E7%B1%B3%E5%AD%94%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-text">7.1 纳米孔工具箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E6%8B%9F%E5%90%88%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-text">7.2 拟合工具箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E8%81%9A%E7%B1%BB%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-text">7.3 聚类工具箱</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-text">8. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-iPython-Console"><span class="nav-text">8.1 iPython Console</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94"><span class="nav-text">9. 常见问题解答</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Shaochuang Liu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/decacent/PyNanoLab" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;decacent&#x2F;PyNanoLab" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <p><a href="../en-us/tutorial">English Versin</a></p>
+<h1 id="PyNanoLab软件操作手册"><a href="#PyNanoLab软件操作手册" class="headerlink" title="PyNanoLab软件操作手册"></a>PyNanoLab软件操作手册</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>PyNanoLab是一个使用PySide6框架结合Python的科学计算生态构建的用户界面(GUI)软件。它旨在提供一个跨平台、现代化和易于操作的界面，用于数据的分析处理和数据的可视化。PyNanoLab从最初的用于纳米孔道离子电流信号的分析工具，逐渐发展为科学数据分析的综合性软件。</p>
+<p>PyNanoLab 主要有以下几个主要特性:</p>
+<ul>
+<li><p><strong>跨平台支持：</strong> PyNanoLab可以在多个操作系统上运行，包括Windows、Mac和Linux。</p>
+</li>
+<li><p><strong>现代化界面：</strong> 采用现代化的用户界面元素和交互方式，以提供良好的用户体验。</p>
+</li>
+<li><p><strong>数据管理</strong>：PyNanoLab提供了统一的数据管理功能，支持常见的数据格式，导入的数据，分析的结果和绘制的图表可以保存在统一的项目文件中，用以重复使用。</p>
+</li>
+<li><p><strong>数据分析：</strong> 软件内置了数据分析工具，包括数据可视化、统计分析和等功能，帮助用户探索和分析实验数据。</p>
+</li>
+<li><p><strong>拓展工具箱:</strong> ：PyNanoLab提供了多种数据分析工具箱，添加扩展功能和插件，以满足特定的分析要求。</p>
+</li>
+</ul>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><p>具体请参照在线教程：<a href="https://pynanolab.com/html/install">https://pynanolab.com/html/install</a></p>
+<h3 id="2-1-系统要求"><a href="#2-1-系统要求" class="headerlink" title="2.1 系统要求"></a>2.1 系统要求</h3><p>为了在计算机上安装和运行PyNanoLab软件，您的系统需要满足以下最低要求</p>
+<p>操作系统：任意带有GUI界面的64位 Windows、macOS和Linux发行版。<br>内存：建议至少8GB RAM。<br>PyNanoLab本身对系统的性能没有太大要求，但是当处理大量数据，特别是对高采样率的数据进行可视化的过程中需要消耗大量的内存和CPU资源。</p>
+<p>PyNanoLab 使用了众多科学计算库和GUI库，因此可能会和当前系统python的模块冲突或者出现兼容性问题，因此建议在一个独立的虚拟环境中安装。首先，您应该已经在系统中安装了Python或Conda虚拟环境，建议使用Miniconda，并将Conda添加到系统环境变量中。在Windows系统中，您还需要安装一个终端程序。建议使用git-windows或Windows Terminal。</p>
+<h3 id="2-2-软件安装"><a href="#2-2-软件安装" class="headerlink" title="2.2 软件安装"></a>2.2 软件安装</h3><ul>
+<li><p>首先，为PyNanoLab 创建独立的虚拟环境，在terminal中执行以下命令：</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pnl python=3.11.3  </span><br><span class="line"><span class="built_in">source</span> activate</span><br><span class="line">conda activate pnl <span class="comment"># activate the pnl environment.</span></span><br><span class="line">conda install numpy</span><br></pre></td></tr></table></figure>
+
+<p>  在上述命令中，我们使用conda 创建了一个名为 <em>pnl</em> 的python虚拟环境，其中指定python版本为3.11.3。接着激活 <em>pnl</em> 环境，并使用conda在此环境中安装mkl版本的numpy。</p>
+</li>
+<li><p>然后，使用pip 工具直接安装pynanolab和相关依赖 </p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pynanolab <span class="comment"># 更新或安装最新版本</span></span><br></pre></td></tr></table></figure>
+<p>至此，pynanolab 已安装在 <em>pnl</em> 虚拟环境中，在激活pnl的终端中直接执行<code>pynanolab</code>命令即可打开软件 (首次打开可能需要稍长的时间)。此外，也可以使用命令<code>pnl-shortcut</code>为软件创建桌面快捷方式。</p>
+</li>
+</ul>
+<h2 id="3-基础操作"><a href="#3-基础操作" class="headerlink" title="3. 基础操作"></a>3. 基础操作</h2><h3 id="3-1-界面导览"><a href="#3-1-界面导览" class="headerlink" title="3.1 界面导览"></a>3.1 界面导览</h3><p><img src="/../../images/ugimgs/image3-1.png" alt="主界面"><br>PyNanoLab 的界面主要包括菜单栏、工具栏、项目管理器和多文档管理器。</p>
+<h4 id="3-1-1-项目管理器"><a href="#3-1-1-项目管理器" class="headerlink" title="3.1.1 项目管理器"></a>3.1.1 项目管理器</h4><p>项目管理器用于管理软件的所有文件和对象，包含一个树浏览器和列表浏览器。PyNanoLab的项目文件以文件夹形式的字典进行管理，一个项目可以创建多个文件夹，其中每一个文件夹分别包含固定的Data、Table和Figure三个子文件夹。</p>
+<ul>
+<li><strong>Data文件夹：</strong> 管理采样数据，数据形式为多通道多组的采样数据，目前支持 Axon的.abf文件、LabVIEW的 .tdms 文件、和 LightField 的.spe光谱文件。</li>
+<li><strong>Table文件夹：</strong> 管理所有生成的和外部导入的表格文件，包括 文本文件(.txt)、.csv、.xlsx、.mat、.npy文件等。</li>
+<li><strong>Figure文件夹：</strong> 管理所有的绘图对象。</li>
+</ul>
+<p>  在选中树浏览器的子文件夹后，列表浏览器将会列出存储在该文件夹下的所有条目，鼠标双击条目即可打开对应的窗口。</p>
+<h4 id="3-1-2-多窗口管理器"><a href="#3-1-2-多窗口管理器" class="headerlink" title="3.1.2 多窗口管理器"></a>3.1.2 多窗口管理器</h4><p>PyNanoLab 所有打开的窗口都显示在多文档管理器中，因此可以支持同时打开多个数据。数据的操作和处理也在对应的窗口中进行。菜单栏的<button>级联显示</button>、<button>平铺显示</button>和<button>最小化显示</button>可以用于整理多文档管理器的窗口。右键菜单中列出了常用的管理命令，主要包括文件的导入、导出和删除。双击条目的名称可以自定义修改当前条目的名字。</p>
+<p>在PyNanoLab中，<strong>Data文件夹</strong>和<strong>Table文件夹</strong>中所有的条目打开的窗口仅仅是<strong>数据的一个视图</strong>，因此关闭窗口并不会删除任何数据，关闭此类窗口是没有关闭警告的。<strong>Figure文件夹</strong>中的窗口即包含图像数据本身，因此关闭图形窗口将会删除对应的绘图对象。</p>
+<h3 id="3-2-项目的管理"><a href="#3-2-项目的管理" class="headerlink" title="3.2 项目的管理"></a>3.2 项目的管理</h3><p>PyNanoLab项目文件的基本结构如下：</p>
+<ul>
+<li><p>项目文件（*.pnl）：PyNanoLab的项目文件是一个ZIP格式的压缩包，其中包含整个项目的内容。该文件作为项目的主要入口点，可以存储和管理项目的所有数据和配置信息。</p>
+<ul>
+<li><p>主文件夹（*.pnlfd）：在项目文件中，每个主文件夹都以ZIP格式存储为一个独立的子文件。主文件夹对应树浏览器中的顶层文件夹，它们包含了项目的不同部分和数据。</p>
+<ul>
+<li><p>数据文件夹（*.pnldat）：数据文件夹是项目中用于存储数据的子文件夹之一。它使用<a target="_blank" rel="noopener" href="https://www.pytables.org/">PyTables</a>将数据存储为<a target="_blank" rel="noopener" href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a>格式，以实现高效的数据存储和访问。数据文件夹可以包含多个数据文件，用于存储不同类型或不同来源的数据。</p>
+</li>
+<li><p>表格文件夹（*.pnltbz）：表格文件夹是项目中用于存储表格数据的子文件夹。它使用<a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/index.html">Pandas</a>的<a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/user_guide/io.html#io-hdf5">HDFStore</a>接口将表格数据存储为HDF5格式。表格文件夹可以包含多个表格文件，用于存储不同的表格数据和结构化信息。</p>
+</li>
+<li><p>图形文件夹（*.pnlfigz）：图形文件夹是项目中用于存储图形数据的子文件夹之一。类似于数据文件夹，它也使用PyTables将图形数据存储为HDF5格式。图形文件夹可以包含多个图形文件，用于存储不同的图形和可视化结果。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>通过这样的文件结构，PyNanoLab项目文件能够将项目的各个组成部分进行组织和存储，实现数据的高效管理和重用。用户可以方便地导入和导出不同的子文件夹，以灵活地处理和共享项目数据。</p>
+<p>上述三个子文件也可以从压缩包中解压出来单独的导入到PyNanoLab中，软件也支持将每个子文件夹独立的导出。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个PyNanoLab项目文件的基本结构</span></span><br><span class="line">model.pnl</span><br><span class="line">├──Folder1.pnlfd</span><br><span class="line">|  ├── Data.pnldat</span><br><span class="line">│  ├── Table.pnltbz</span><br><span class="line">│  ├── Figure.pnlfigz</span><br><span class="line">├──Folder2.pnlfd</span><br><span class="line">|  ├── Data.pnldat</span><br><span class="line">│  ├── Table.pnltbz</span><br><span class="line">│  ├── Figure.pnlfigz</span><br></pre></td></tr></table></figure>
+<p>虽然，PyNanoLab的项目文件存储没有上限，但仍然不建议在一个项目文件中存储大量的数据，特别是包含特别多的原始数据，从而增加存储和打开的时间以及出现错误的概率。建议单个文件不超过4GB的大小，以免在某些文件系统中遇到未知的问题。</p>
+<p>当打开项目文件出错的时候，可是直接使用解压缩软件（例如:7z）将 *.pnl内的文件解压出来，单独的导入到软件中，或者直接编写程序查看和导出数据。</p>
+<h2 id="4-Data模块"><a href="#4-Data模块" class="headerlink" title="4. Data模块"></a>4. Data模块</h2><p>PyNanoLab根据导入的数据类型将数据放入不同的文件夹进行处理，Data文件夹主要处理采集的各种非表格结构的数据。通过工具栏的 <button>导入</button>按钮或者直接<strong>拖曳</strong>文件到树浏览器即可打开文件。</p>
+<p>导入数据文件后，双击该文件的条目即可创建数据的视图窗口，在PyNanoLab中，采样数据的可视化使用<a target="_blank" rel="noopener" href="https://www.pyqtgraph.org/">Pyqtgraph</a>框架构建,可以实现数据的高速显示。</p>
+<h3 id="4-1-采样数据的处理"><a href="#4-1-采样数据的处理" class="headerlink" title="4.1 采样数据的处理"></a>4.1 采样数据的处理</h3><p><img src="/../../images/ugimgs/4-1.png" alt="Data UI"><br>在PyNanoLab中，软件的文件IO接口会自动从文件读取所需的采样率、滤波、单位、名称等信息，ABF等电生理的采样数据由sampledatawidget进行处理，如上图所示，主要包括：</p>
+<ul>
+<li><p><strong>数据浏览器</strong><br>在左侧的树浏览器中，列出了该数据文件所有的sweeps和在每一个sweep下的通道，鼠标选中对应通道，即可在绘图区域显示该通道的数据。</p>
+</li>
+<li><p><strong>数据可视化</strong><br>数据显示区域使用Pyqtgraph的lineplot绘制，图形区域支持3点鼠标操作。在图形上点击右键保持，拖曳即可实现图形的缩放和位移。在绘图区，分别添加了两个纵向的cursor，用于辅助选择图形中的数据。</p>
+</li>
+<li><p><strong>工具栏1</strong><br>主要包含所有的用于原始数据操作和提取的工具:</p>
+<ul>
+<li><p><img alt="reset" src="../../images/ugimgs/reset_blue.svg" style="vertical-align:middle" width="20" height="20">: 重置数据，窗口保留了一份原始数据的备份。可以点击此按钮将数据重置为初始状态。</p>
+</li>
+<li><p><img alt="PSD" src="../../images/ugimgs/psd_blue.svg" style="vertical-align:middle" width="20" height="20">: 计算并绘制光标区间内数据的功率谱密度。</p>
+</li>
+<li><p><img alt="to Table" src="../../images/ugimgs/export_blue.svg" style="vertical-align:middle" width="20" height="20">: 导出光标区间内的数据到表格。</p>
+</li>
+<li><p><img alt="ToMatFile" src="../../images/ugimgs/E-matlab_blue.svg" style="vertical-align:middle" width="20" height="20">: 导出光标区间内数据到MATLAB的.mat文件。</p>
+</li>
+<li><p><img alt="Detrend" src="../../images/ugimgs/detrend_blue.svg" style="vertical-align:middle" width="20" height="20">: 将数据中上升或者下降的趋势消除掉。</p>
+<blockquote>
+<p>点击该按钮后，图形中将出现一条趋势线，通过调整两端的锚点可以调整趋势线的斜率；在趋势线上双击，可以添加新的锚点。设置完成后，点击确认按钮即可。</p>
+</blockquote>
+</li>
+<li><p><img alt="Reverse" src="../../images/ugimgs/reverse_blue.svg" style="vertical-align:middle" width="20" height="20">: 数据翻转，取数据的相反数。</p>
+</li>
+<li><p><img alt="Histogram" src="../../images/ugimgs/histogram_blue.svg" style="vertical-align:middle" width="20" height="20">: 计算并绘制光标区间内数据的Histogram。</p>
+</li>
+<li><p><img alt="dropdate" src="../../images/ugimgs/dropdate_blue.svg" style="vertical-align:middle" width="20" height="20">: 删除光标区间内的数据，可以用以去除数据中异常的区间，方便后续信号提取。</p>
+</li>
+<li><p><img alt="concat" src="../../images/ugimgs/concat_blue.svg" style="vertical-align:middle" width="20" height="20">: 将多个sweeps的数据合并到一个sweeps。</p>
+</li>
+<li><p><img alt="extend Cursors" src="../../images/ugimgs/arrowsbirection_blue.svg" style="vertical-align:middle" width="20" height="20">: 将光标放置到最大位置，选中所有数据。</p>
+</li>
+<li><p><img alt="Bring Cursors" src="../../images/ugimgs/cursor_blue.svg" style="vertical-align:middle" width="20" height="20">: 将所有光标放放置在可视区域内。</p>
+</li>
+<li><p><img alt="Bring Cursors1" src="../../images/ugimgs/cursor1_blue.svg" style="vertical-align:middle" width="20" height="20">: 将光标1放置在可视区域内。</p>
+</li>
+<li><p><img alt="Bring Cursors2" src="../../images/ugimgs/cursor2_blue.svg" style="vertical-align:middle" width="20" height="20">: 将光标2放置在可视区域内。</p>
+</li>
+<li><p><img alt="autoscale" src="../../images/ugimgs/scale_blue.svg" style="vertical-align:middle" width="20" height="20">: 自动缩放图形。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>工具栏2</strong><br> 主要包含用于数据处理的工具:</p>
+<ul>
+<li><p><img alt="Nanopore" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>提取纳米孔信号</strong>，在3.0版本，我们推荐使用纳米孔工具箱进行纳米孔信号的处理，具体使用方法请参照章节<a href="#71-%E7%BA%B3%E7%B1%B3%E5%AD%94%E5%B7%A5%E5%85%B7%E7%AE%B1">7.1</a>。</p>
+</li>
+<li><p><img alt="denoise" src="../../images/ugimgs/denoise_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>数据降噪</strong>。<br> <img src='../../images/ugimgs/4-2.png' margin-right=100 width=500> </img><br> 该工具包含了几种对数据降噪的算法。如图所示，在method里选择所要使用的算法，并在下方设置相应的参数。<em>between curose</em> 表示只处理光标之间的数据，<em>Full Trace</em> 表示处理整个数据。设置完成后可以点击<button>Preview</button> 预览效果，确认无误后点击<button>Apply</button>作用到原始数据上。</p>
+</li>
+<li><p><img alt="Filter" src="../../images/ugimgs/fillter_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>滤波器工具</strong><br> <img src="/../../images/ugimgs/4-3.png" alt="Alt text"><br> 包含butter和bessl型的低通、高通、带通和带阻滤波器。使用scipy.signal 完成，具体设置参数可参考:<a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bessel.html#scipy.signal.bessel">scipy.signal.bessel</a> 和<a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html#scipy.signal.butter">scipy.signal.butter</a>。</p>
+</li>
+<li><p><img alt="Baseline" src="../../images/ugimgs/baseline_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>基线拟合</strong><br> <img src="/../../images/ugimgs/4-4.png" alt="Alt text"><br>用以对数据进行基线矫正，获取数据的基线或者去除基线将数据平滑，使用<a target="_blank" rel="noopener" href="https://pybaselines.readthedocs.io/en/latest/">pybaselines</a>包完成计算。其中segmentation表示是否对数据进行分割，采样数据通常数据量比较大，直接对所有信号寻找基线会占用大量的内存或者使得系统崩溃，在这里我们可以将数据分组进行计算，该值设为0即表示不进行分组。对于每一种算法的参数设置，请参考<a target="_blank" rel="noopener" href="https://pybaselines.readthedocs.io/en/latest/algorithms/index.html">pybaselines</a>的算法文档。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/baseline_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>数据计算</strong><br>  <img src="/../../images/ugimgs/4-5.png" alt="Alt text"><br>  使用表达式对数据进行计算，支持<a target="_blank" rel="noopener" href="https://numexpr.readthedocs.io/en/latest/user_guide.html#supported-operators">numexpr</a>的表达式格式，也可以通过下拉列表选择所有支持的操作和函数。local var 列出了代表数据的变量，Operator列出了支持的运算操作，Functions列出了所有支持的函数的符号。例如：输入：<code>sin(IN0+100)</code>,表示对第一个通道的数据+100并计算正弦值后赋值给当前预览的通道。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/splets_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>时频谱</strong>，一种计算时频谱的算法，请参考文献(<a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41467-020-20539-9">10.1038&#x2F;s41467-020-20539-9</a>)。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/nanopore_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>纳米孔工具箱</strong>，点击该按钮，位于光标间的数据将被转移至纳米孔工具箱进行后续处理。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-光谱数据的处理"><a href="#4-2-光谱数据的处理" class="headerlink" title="4.2 光谱数据的处理"></a>4.2 光谱数据的处理</h3><p>   to be continued …</p>
+<h2 id="5-Table模块"><a href="#5-Table模块" class="headerlink" title="5. Table模块"></a>5. Table模块</h2><p>PyNanoLab构建了类似于excel和OriginLab的表格工具。使用pandas管理后台数据和运算，使用QTableView进行数据的展示和交互。通过<button>Import</button>可以直接导入外部的数据到Table文件夹中。对于文本文件，我们构建了一个数据导入向导帮助数据的加载。此外，也支持 numpy 的 npy、npz和matlab文件的导入。</p>
+<p>PyNanoLab的表格支持多个工作簿，每一个工作簿包含一个数据的表格和一个对应表头的信息表格(类似于OriginLab)，主要记录数据的”Name”、”Unit”、”Type”信号。每一个表格包含一个日志文件，可以自动或者手动记录文件的一些信息，支持markdown格式，日志的入口位于表格窗口的右上角。</p>
+<p>PyNanoLab的表格窗口记录了过去的10步操作，因此最多可以执行10步撤销。在窗口关闭时，历史记录也将消失，因此关闭窗口虽然不会删除数据但会丢失数据的历史记录。但过多的历史记录也会消耗一定的系统资源，需要在此之间平衡。</p>
+<p>PyNanoLab的表格大部分操作简单明了，在此主要介绍几种特色的功能。</p>
+<ul>
+<li><p><strong>数据的导出</strong><br><img src="/../../images/ugimgs/5-1.png" alt="Alt text"><br>在列表浏览器中右键即可找到文件导出的入口，同时也可以选择复选框选中多个文件同时导出。</p>
+</li>
+<li><p><strong>设置绘图标签</strong><br><img src="/../../images/ugimgs/5-2.png" alt="Alt text"><br>在数据可视化中，我们需要指定数据的X-Y等标签。在信息表中选中列，右键选择-&gt; <kbd>设置绘图标签为</kbd>,选择对应符号，然后将会显示在表头上。</p>
+</li>
+<li><p><strong>设置数据类型</strong><br>同上述操作类似，用于修改每一列数据的数据类型。</p>
+</li>
+<li><p><strong>数据筛选</strong><br><img src="/../../images/ugimgs/5-3.png" alt="Alt text"><br>PyNanoLab具有强大且方便的筛选功能，支持<a target="_blank" rel="noopener" href="https://numexpr.readthedocs.io/en/latest/user_guide.html#supported-operators">numexpr</a>和<a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html#pandas.DataFrame.query">pandas</a>的表达式格式，筛选的结果直接生成在新的表格中。以上图为例,表达式 <code>A&gt;15 and B&gt;0.2</code>; 其中A和B是每一列数据的唯一标识符，可以支持多个布尔运算同时筛选。<br> EXAMPLES:</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A &gt; <span class="number">15</span>  <span class="keyword">and</span> (B &gt; <span class="number">0.2</span> <span class="keyword">or</span> B &lt; <span class="number">0</span>) </span><br><span class="line">sin(A)&gt;<span class="number">0.5</span></span><br><span class="line">A+B&gt;<span class="number">12</span> <span class="keyword">and</span> (B &lt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>查找替换</strong><br><img src="/../../images/ugimgs/5-4.png" alt="Alt text"><br>可以查找替换满足条件的数字和字符串，支持正则表达式。<a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.replace.html">参考链接</a><br>如上图所示：将A和B列中大于15的数字替换为10。</p>
+</li>
+<li><p><strong>复制</strong><br>PyNanoLab中为了增强性能，表格的数据进行分页显示。因此直接在表格中全选复制只能最多获取1000行的数据，因此如果需要复制整个表格的数据到excel等其他软件，需要使用工具栏的复制按钮，复制选中列的所有数据。</p>
+</li>
+<li><p><strong>分列</strong><br>只针对字符串数据类型，根据匹配的符号将一列数据分成多列，类似于Excel的分列功能。</p>
+</li>
+<li><p><strong>计算</strong><br><img src="/../../images/ugimgs/5-5.png" alt="Alt text"><br>PyNanoLab支持直接使用表达式对表格数据进行计算，类似于EXCEL的公式功能。软件包含两种计算方法: 一种如上图所示在计算对话框中输入表达式,</p>
+<p>以<code>H=A+sin(B)</code>为例，表示将右边计算的结果赋值给名为<code>H</code>的列，如果H列在表格中不存在，则创建新的列；如果存在，则修改对应列的值。</p>
+<p>另一种是在表头的<kbd>Func</kbd>单元格中直接输入等号右边的表达式，默认将结果赋值给当前列。</p>
+</li>
+<li><p><strong>工作簿的拼接和合并</strong><br>PyNanoLab支持对一个表格中的工作簿进行合并和拼接。对于不同表格的工作簿，可以使用鼠标拖曳将工作簿从一个表格复制到另一个表格中。</p>
+<p> 工作簿拼接使用<code>pandas.concat</code>,即沿着某一个轴将两个表格合并，主要用于为数据添加新的行和列。</p>
+<p> 工作簿合并使用<code>pandas.merge</code>,即用一个新的表格更新旧表格的数据，类似于数据库的更新。</p>
+<p> 请参考<a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/user_guide/merging.html">Pandas userguide</a>,选择适合自己的操作。</p>
+</li>
+</ul>
+<h2 id="6-数据可视化"><a href="#6-数据可视化" class="headerlink" title="6. 数据可视化"></a>6. 数据可视化</h2><p>PyNanoLab通过matplotlib绘图库构建了一套完整的绘图工具，结合pandas构建的表格工具，实现了matplotlib绘图库的gui交互式绘图，可以通过gui界面实现对图形任意参数的设置、保存和重载，无需任何代码。目前已实现曲线图、散点图、柱状图、分布图、地形图等多种图形的数据可视化。</p>
+<p>matplotlib 的绘图分为三个层次：</p>
+<ul>
+<li><p>Figure：<br>Figure 表示一张画布上的绘图区域，一张画布可以有一个或多个，相同或者不同类型的坐标系，是所有绘图元素的顶级容器。一般通过<code>plt.Figure()</code>​创建一张图片。</p>
+</li>
+<li><p>Axes:<br>Axes表示一张图片上的坐标系系统，在一张画布上可以同时有多个坐标系，每个坐标系包含x、y轴，每一个坐标轴上又有对应的ticks，tickslable和坐标轴标签。PyNanoLab 的所有2D图使用同一类型的坐标系系统，可以控制所有坐标轴属性的设置。</p>
+</li>
+<li><p>Artist：<br>Artist表示坐标系上具体绘制的对象，例如曲线、散点等，使用不同的Artist最终就可以绘制不同类型的数据图。</p>
+</li>
+</ul>
+<p>PyNanoLab通过重新组织matplotlib的绘图对象，为每一种artists设计了独立的gui参数设置工具，实现了交互式绘图，无需复杂的Coding过程。</p>
+<p>PyNanoLab绘图只需要在表格中根据需要将需要绘图的数据列设置对应的绘图标签，然后选中数据选择对应图形的按钮即可。</p>
+<p><img src="/../../images/ugimgs/6-1.png" alt="Alt text"><br>如上图所示：PyNanoLab的图像窗口包括工具栏、对象浏览器和绘图区域。对象浏览器列出了图像上所有元素的结构，每一个图形可以有多个坐标系，每一个坐标系下可以有多个图形对象(artist)。</p>
+<ul>
+<li><p><strong>图形的合并</strong><br>PyNanoLab 支持通过拖曳将其他图像一个坐标系下的绘图对象放置到另一个坐标系下，通过该方法可以实现图形的合并。<br><img src="/../../images/ugimgs/6-2.gif" alt="Alt text"></p>
+</li>
+<li><p><strong>自定义布局</strong><br>此外，自定义绘图方法，可以绘制复杂的坐标系布局，然后再将已经绘制好的图形对象放置到对应的坐标系,构建复杂的图形。</p>
+<p>点击绘图菜单下的<kbd>自定义绘图</kbd>,之后会弹出一个向导对话框。    </p>
+<p><strong>第一步:</strong> 设置图形的大小和坐标系网格。axes grid 用来帮助在图形上划分网格，然后方便后续在图形上放置坐标系。一个坐标系可以占据多个单元格，因此可以使用此方法设置坐标系的比例的大小。</p>
+<p><img src="/../../images/ugimgs/6-3.png" alt="Alt text"></p>
+<p><strong>第二步:</strong> 根据第一步设置的网格生成对应的表格，然后选中想要创建一个坐标系的单元格并点击<kbd>Add Axes</kbd> 按钮，即可将该区域标记为一个坐标系。</p>
+<p><img src="/../../images/ugimgs/6-4.png" alt="Alt text"><br><strong>第三步:</strong> 为每一个坐标系设置对应的类型，默认为2D图。<br><img src="/../../images/ugimgs/6-5.png" alt="Alt text"><br><strong>第四步:</strong> 预览创建的坐标系，如果不符合需求可以返回上一步重新设置。<br><img src="/../../images/ugimgs/6-6.png" alt="Alt text"></p>
+<p>最后，我们将其他图中绘制好的Artist拖曳到对应的坐标系，即可生成一张复杂的图形。<br><img src="/../../images/ugimgs/6-7.png" alt="Alt text"></p>
+<p>整个过程如图所示：<br><img src="/../../images/ugimgs/6-8.gif" alt="Alt text"></p>
+<p>更多图形的绘制方法，请参考<a href="../../2023/05/29/vis/">用PyNanoLab进行数据可视化</a></p>
+</li>
+</ul>
+<h2 id="7-工具箱"><a href="#7-工具箱" class="headerlink" title="7. 工具箱"></a>7. 工具箱</h2><h3 id="7-1-纳米孔工具箱"><a href="#7-1-纳米孔工具箱" class="headerlink" title="7.1 纳米孔工具箱"></a>7.1 纳米孔工具箱</h3><p><img src="/../../images/ugimgs/7-1.png" alt="Alt text"></p>
+<p>纳米孔工具箱主要用于纳米孔信号的提取和分析。其主界面包括：工具栏、信号列表、绘图区域和结果表格。纳米孔工具箱的原始数据可以直接从主界面的Data widget将光标区间的数据导入，然后存储成一个独立的 *.pnlmd 文件。该文件记录了所有的原始数据和分析结果，内部存储结构为 pytables的HDF5文件，可以方便的重新导入到工具箱进行再次分析。独立的纳米孔工具箱可以实现更复杂的信号分析和批处理过程，并方便的集成新的功能。其主要功能如下：</p>
+<ul>
+<li><p><img alt="eval" src="../../images/ugimgs/import_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>导入模型:</strong> 导入存储的 *.pnlmd 文件.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/save-file-option_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>导出数据:</strong> 导出数据到 *.pnlmd 文件.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/export_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>数据导出:</strong> 导出数据到文件或者主界面。包含两个功能：一个是导出信号分析结果到文件或者主界面；一个是导出原始数据<br>  <img src="/../../images/ugimgs/7-2.png" alt="Alt text"><br>  导出原始数据可以将信号的原始数据、拟合的信号导出为一个或多个文件，方便使用自定义的脚本和软件进行后续分析。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/lineview_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>绘制原始数据:</strong> 可视化原始信号，信号自动提取时需要将原始信号显示出来并设置参数。 </p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/corr_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>绘制拟合数据:</strong> 将原始信号和拟合的结果一起绘制，可以方便的整体检查信号的分析质量。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/scale_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>自动缩放图像</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>纳米孔信号自动分析</strong>：纳米孔自动分析的入口。<br>  <img src="/../../images/ugimgs/7-3.png" alt="Alt text"><br>  如上图所示，其中preprocessing 部分是在信号分析是对数据进行一些降噪的预处理。在自动分析之前。需要手动设置一些参数帮助程序寻找并分析信号，具体解释如下：</p>
+<ul>
+<li><strong>Model:</strong> 选择信号分析方法。每一种方法的结果请参照后续的结果图。</li>
+<li><strong>Baseline:</strong> 设置信号的基线，即开口电流。可以通过拖动绘图区的baseline线选取。</li>
+<li><strong>Threhold:</strong> 设置信号阈值，即大于或小于此值的信号才进行分析。</li>
+<li><strong>Direction:</strong> 信号位于基线上方还是下方。Tips：在纳米孔中，我们通常用阻断信号或者增强信号描述一个信号的行为。在这里我们使用Direction是因为，在负电压的阻断信号中，信号的数值(eg. -100)是大于基线的数值的(eg. -200)，因此在基于数值分析的信号处理中使用阻断和增强信号描述会带来误解。 在后续版本中，我们将去除该选项，使用设置的基线和阈值自动判断信号方向。</li>
+<li><strong>fluctuation</strong>: 信号的噪音，该值是寻找信号的重要参数，我们在超过该阈值的台阶波动中寻找信号。设置为：基线噪音的上下波动范围，更准确的说是 基线上极值点和下极值点差值的平均值。</li>
+<li><strong>fluctuation2</strong>: 同上述参数。用于在多台阶分析中，在信号内部寻找多台阶时使用该值，避免基线和信号的噪音差异过大带来的误差。设为0即表示使用fluctuation。</li>
+<li><strong>ignore time less</strong>：在多台阶分析中，忽略持续时间小于该值的台阶。</li>
+<li><strong>ClusterNum</strong>： 在multistepsKmeans方法中，设置信号预期最多的台阶数目。</li>
+<li><strong>Kernel Size</strong>：Kmeans 算法的kernel数目。</li>
+<li><strong>Sigma</strong>：extremejump算法使用的参数，该算法只需要这一个参数，在超过该倍数的基线噪音的波动中寻找信号，无需要求基线平整。</li>
+<li><strong>BaseLineNum</strong>：faradayStep 算法的参数：表示使用多少数据点计算基线。</li>
+<li><strong>StopNum</strong>：faradayStep 算法的参数：表示使用多少数据点判断信号结束。</li>
+<li><strong>StopDiff</strong>：faradayStep 算法的参数：表示使用多判断信号结束的误差。</li>
+</ul>
+<p><img src="/../../images/ugimgs/7-4.png" alt="Alt text"></p>
+<p>在上述算法中 <em>singleStepOriginal, singleStepReduced, singleStepAdept2</em> 用于单台阶信号处理。<em>multistepspnl, multiStepkmeans，IDMS</em> 用于多台阶信号分析。<br>singleStepAdept2 算法来源于<a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.analchem.6b03725">MOSAIC</a>，我们使用了更好的方式进行算法实现。其他所有算法为PyNanoLab自主开发。</p>
+<p>在IDMS方法中，需要对单个信号进行多台阶处理。是用该算法需预先使用 <em>cutignal</em> 算法将信号进行分割。</p>
+<ul>
+<li><strong>信号的预览</strong><br>在纳米孔工具箱中，分析好的信号有两种预览方法，一种是点击工具栏的<kbd>绘制拟合信号</kbd>，全局预览所有分析的结果。此外，可以点击信号列表一个个预览单个信号。</li>
+<li><strong>信号的修改</strong><br>在纳米孔工具箱中，支持对分析完成的信号进行二次的手动修改。点击绘图区域下方的<kbd>View mode</kbd> 按钮，即可将软件在预览模式和编辑模式之间切换。在编辑模式中，点击每一个信号，绘图将会显示出表示信号台阶的线，通过拖动每一条线即可实时修改信号的分析结果。也可以点击<kbd>Reset</kbd>, 删除分析结果，使用手动模式分析。</li>
+<li><strong>信号的手动分析</strong><br>通过双击图形中的数据点标记信号台阶的起始和结束位置，点击<kbd>Confirm</kbd>按钮，即可重新计算结果。<br><img src="/../../images/ugimgs/7-5.gif" alt="Alt text"></li>
+</ul>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/manual_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>信号的手动添加</strong>：手动添加信号到信号列表。用于处理信号噪音波动大，基线不平，无法自动提取信号的数据。<br>  <img src="/../../images/ugimgs/7-6.gif" alt="Alt text"></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/reset_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>重置信号</strong>：将所有信号重置为未分析状态。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/clear_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>删除信号</strong>：删除信号列表里的所有信号。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/infochart_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>统计图</strong>：自动生成纳米孔结果的统计图。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/psd_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>批处理计算每个信号的PSD</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/stft_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>批处理计算每个信号的stft谱</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/splets_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>批处理计算每个信号的时频谱，使用superlets算法</strong></p>
+</li>
+</ul>
+<h3 id="7-2-拟合工具箱"><a href="#7-2-拟合工具箱" class="headerlink" title="7.2 拟合工具箱"></a>7.2 拟合工具箱</h3><h3 id="7-3-聚类工具箱"><a href="#7-3-聚类工具箱" class="headerlink" title="7.3 聚类工具箱"></a>7.3 聚类工具箱</h3><h2 id="8-高级功能"><a href="#8-高级功能" class="headerlink" title="8. 高级功能"></a>8. 高级功能</h2><h3 id="8-1-iPython-Console"><a href="#8-1-iPython-Console" class="headerlink" title="8.1 iPython Console"></a>8.1 iPython Console</h3><h2 id="9-常见问题解答"><a href="#9-常见问题解答" class="headerlink" title="9. 常见问题解答"></a>9. 常见问题解答</h2>
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shaochuang Liu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

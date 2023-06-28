@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pynanolab.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="中文版本 PyNanoLab User Guide1. IntroductionPyNanoLab is a user interface (GUI) software built using the PySide6 framework integrated with Python’s scientific computing ecosystem. It aims to provide a cro">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyNanoLab">
+<meta property="og:url" content="http://pynanolab.com/html/en-us/tutorial.html">
+<meta property="og:site_name" content="PyNanoLab">
+<meta property="og:description" content="中文版本 PyNanoLab User Guide1. IntroductionPyNanoLab is a user interface (GUI) software built using the PySide6 framework integrated with Python’s scientific computing ecosystem. It aims to provide a cro">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/image3-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reset_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/psd_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/export_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/E-matlab_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/detrend_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reverse_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/histogram_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/dropdate_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/concat_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/arrowsbirection_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor1_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/cursor2_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/scale_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/extract_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/denoise_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/fillter_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/baseline_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/baseline_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/4-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/splets_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/nanopore_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/5-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-2.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-5.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-6.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-7.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/6-8.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-1.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/import_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/save-file-option_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/export_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-2.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/lineview_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/corr_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/scale_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/extract_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-3.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-4.png">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-5.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/manual_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/7-6.gif">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/reset_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/clear_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/infochart_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/psd_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/stft_blue.svg">
+<meta property="og:image" content="http://pynanolab.com/images/ugimgs/splets_blue.svg">
+<meta property="article:published_time" content="2023-06-28T12:48:02.138Z">
+<meta property="article:modified_time" content="2023-06-28T12:48:02.138Z">
+<meta property="article:author" content="Shaochuang Liu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pynanolab.com/images/ugimgs/image3-1.png">
+
+
+<link rel="canonical" href="http://pynanolab.com/html/en-us/tutorial">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://pynanolab.com/html/en-us/tutorial.html","path":"html/en-us/tutorial.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | PyNanoLab
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/images/logo.png" alt="PyNanoLab">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PyNanoLab</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-installation"><a href="/html/install" rel="section"><i class="fa fa-download fa-fw"></i>Installation</a></li><li class="menu-item menu-item-tutorial"><a href="/html/en-us/tutorial" rel="section"><i class="fa fa-download fa-fw"></i>Tutorial</a></li><li class="menu-item menu-item-blog"><a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Blog</a></li><li class="menu-item menu-item-changelog"><a href="/html/changelog" rel="section"><i class="fa fa-undo fa-fw"></i>Changelog</a></li><li class="menu-item menu-item-about"><a href="/html/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PyNanoLab-User-Guide"><span class="nav-text">PyNanoLab User Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Installation"><span class="nav-text">2. Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-System-Requirements"><span class="nav-text">2.1 System Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Software-Installation"><span class="nav-text">2.2 Software Installation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Basic-operations"><span class="nav-text">3. Basic operations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Interface-navigation"><span class="nav-text">3.1 Interface navigation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-Project-Manager"><span class="nav-text">3.1.1 Project Manager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-MDI-manager"><span class="nav-text">3.1.2 MDI manager</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Management-of-project-files"><span class="nav-text">3.2  Management of project files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Data"><span class="nav-text">4. Data</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Processing-of-sampling-data"><span class="nav-text">4.1 Processing of sampling data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Processing-of-spectral-data"><span class="nav-text">4.2 Processing of spectral data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Table"><span class="nav-text">5. Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Visualization"><span class="nav-text">6. Visualization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Toolbox"><span class="nav-text">7. Toolbox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-Nanopore-Toolbox"><span class="nav-text">7.1 Nanopore Toolbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Curve-fitting-toolbox"><span class="nav-text">7.2 Curve fitting toolbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-Clustering-toolbox"><span class="nav-text">7.3 Clustering toolbox</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Advanced"><span class="nav-text">8. Advanced</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-iPython-Console"><span class="nav-text">8.1 iPython Console</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-FAQ"><span class="nav-text">9. FAQ</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Shaochuang Liu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/decacent/PyNanoLab" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;decacent&#x2F;PyNanoLab" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <p><a href="../zh-cn/tutorial">中文版本</a></p>
+<h1 id="PyNanoLab-User-Guide"><a href="#PyNanoLab-User-Guide" class="headerlink" title="PyNanoLab User Guide"></a>PyNanoLab User Guide</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>PyNanoLab is a user interface (GUI) software built using the PySide6 framework integrated with Python’s scientific computing ecosystem. It aims to provide a cross-platform, modern, and user-friendly interface for data analysis and visualization. Starting as an analysis tool for nanopore ion current signals, PyNanoLab has evolved into a comprehensive software for scientific data analysis.</p>
+<p>Main features::</p>
+<ul>
+<li><p><strong>Cross-platform support:</strong> PyNanoLab can run on multiple operating systems, including Windows, Mac, and Linux.</p>
+</li>
+<li><p><strong>Modern interface</strong>：It employs modern user interface elements and interactive methods to offer an enhanced user experience.</p>
+</li>
+<li><p><strong>Data managemen:</strong> PyNanoLab provides unified data management capabilities, supporting common data formats. Imported data, analysis results, and generated charts can be saved within a unified project file for future reference and reproducibility.</p>
+</li>
+<li><p><strong>Data Analysis:</strong> The software includes built-in data analysis tools, such as data visualization, statistical analysis, and more, empowering users to explore and analyze experimental data effectively.</p>
+</li>
+<li><p><strong>Extensible Toolbox:</strong> PyNanoLab offers various data analysis toolboxes and the ability to add extensions and plugins to meet specific analytical requirements.</p>
+</li>
+</ul>
+<h2 id="2-Installation"><a href="#2-Installation" class="headerlink" title="2. Installation"></a>2. Installation</h2><p>Please refer to the online tutorial:：<a href="https://pynanolab.com/html/install">https://pynanolab.com/html/install</a></p>
+<h3 id="2-1-System-Requirements"><a href="#2-1-System-Requirements" class="headerlink" title="2.1 System Requirements"></a>2.1 System Requirements</h3><p>In order to install and run the PyNanoLab software on your computer, your system needs to meet the following minimum requirements</p>
+<p>Operating System: Any 64-bit Windows, macOS, and Linux distribution with a GUI interface.<br>RAM: At least 8GB RAM is recommended.</p>
+<p>PyNanoLab does not have much requirements for the performance of the system, but it consumes a lot of memory and CPU resources when processing large amounts of data, especially visualizing data at high sample rates.</p>
+<p>PyNanoLab uses a number of scientific computing libraries and GUI libraries, so it may conflict with the modules of the current system python or have compatibility issues, so it is recommended to install it in a separate virtual environment. First of all, you should already have a Python or Conda virtual environment installed in your system, it is recommended to use Miniconda, and add Conda to the system environment variables. On Windows, you also need to install a terminal program. Git-Windows or Windows Terminal is recommended.</p>
+<h3 id="2-2-Software-Installation"><a href="#2-2-Software-Installation" class="headerlink" title="2.2 Software Installation"></a>2.2 Software Installation</h3><ul>
+<li><p>First, create an virtual environment for PyNanoLab and execute the following command in terminal:</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pnl python=3.11.3  </span><br><span class="line"><span class="built_in">source</span> activate</span><br><span class="line">conda activate pnl <span class="comment"># activate the pnl environment.</span></span><br><span class="line">conda install numpy</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>In the above command, we used conda to create a Python virtual environment called <em>pnl</em>, where the Python version is specified as 3.11.3. Then activate the <em>pnl</em> environment and use Conda to install the MKL version of numpy in this environment.</p>
+<ul>
+<li>Then, use the pip to install pynanolab and the dependencies directly.  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pynanolab <span class="comment"># install or upgrade</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>So, PyNanoLab is installed in the <em>pnl</em> virtual environment, and the software can be opened by executing the command <code>pynanolab</code> directly in the terminal where <em>pnl</em> is activated (it may take a little longer to open it for the first time). You can also use commands <code>pnl-shortcut</code> to create desktop shortcuts for the software.</p>
+<h2 id="3-Basic-operations"><a href="#3-Basic-operations" class="headerlink" title="3. Basic operations"></a>3. Basic operations</h2><h3 id="3-1-Interface-navigation"><a href="#3-1-Interface-navigation" class="headerlink" title="3.1 Interface navigation"></a>3.1 Interface navigation</h3><p><img src="/../../images/ugimgs/image3-1.png" alt="主界面"><br>PyNanoLab’s interface consists of a menu bar, toolbar, project manager, and MDI manager.</p>
+<h4 id="3-1-1-Project-Manager"><a href="#3-1-1-Project-Manager" class="headerlink" title="3.1.1 Project Manager"></a>3.1.1 Project Manager</h4><p>The Project Manager in PyNanoLab serves as a comprehensive tool for managing all files and objects within the software. It comprises a tree browser and an item browser, offering efficient organization and navigation capabilities.</p>
+<p>PyNanoLab’s project files are structured as dictionaries, adopting a folder-based approach. Each project can create multiple folders, and within each folder, three subfolders are included: Data, Table, and Figure.</p>
+<ul>
+<li><strong>Data Folder:</strong> Manages sampling data in the form of multi-channel and multi-sets, currently supports Axon .abf files, LabVIEW .tdms files, and LightField .spe spectral files.</li>
+<li><strong>Table Folder:</strong> Manage all generated and externally imported table files, including text files (.txt), . .csv. .xlsx. mat、. npy files, etc.</li>
+<li><strong>Figure Folder:</strong> Manage all drawing objects.</li>
+</ul>
+<p>When a subfolder of the tree browser is selected, the list browser will show all items stored in that folder, and the corresponding window can be opened by double-clicking the entry.</p>
+<p>By employing this folder structure, PyNanoLab’s Project Manager streamlines file management, ensuring a coherent and organized workflow for users.</p>
+<h4 id="3-1-2-MDI-manager"><a href="#3-1-2-MDI-manager" class="headerlink" title="3.1.2 MDI manager"></a>3.1.2 MDI manager</h4><p>PyNanoLab incorporates a Multi-Document Manager that displays all open windows within the software, allowing users to work with multiple datasets simultaneously. Each window corresponds to a specific dataset and facilitates data manipulation and processing. The button <button>Cascade Show</button>、<button>Tilesub Show</button> and <button>Minized Show</button> can be used to organize the windows. </p>
+<p>Additionally, the right-click menu of the items list view provides common administrative commands for managing the datasets. These commands typically include importing new files, exporting data, and deleting files from the software.</p>
+<p>In PyNanoLab, the widgets for the Data Folder and the Table Folder serve as views of the underlying data. When you close these windows, it does not delete any data. You can open and close these windows as needed without affecting the data itself.</p>
+<p>On the other hand, the widget in the Figure Folder contains the actual figure data. When you close the graphics window associated with a figure, it will delete the corresponding drawing. This behavior allows for efficient management of figures and helps keep the workspace organized. If you no longer need a specific figure, closing its window will remove it from the software and free up system resources.</p>
+<p>By providing separate handling for data views and figure widgets, PyNanoLab offers flexibility in managing and visualizing data while ensuring that the workspace remains tidy and clutter-free.</p>
+<h3 id="3-2-Management-of-project-files"><a href="#3-2-Management-of-project-files" class="headerlink" title="3.2  Management of project files"></a>3.2  Management of project files</h3><p>PyNanoLab has built a dedicated file format for storing the entire project’s content, enabling data reloading and graph redraw. The <em>*.pnl</em> format is the project file format used by PyNanoLab, which essentially is a ZIP-compressed archive. Within the compressed archive, data is organized in folder structures that correspond to the main folders in the tree browser. Each main folder is also stored as a ZIP file with the <em>*.pnlfd</em> extension.</p>
+<p>For subfolders, the Data folder and Figure folder are stored as <a target="_blank" rel="noopener" href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a> files using <a target="_blank" rel="noopener" href="https://www.pytables.org/">PyTables</a>, allowing for efficient storage of large-scale sampled data. The file extensions for these subfolders are <em>.pnldat</em> and <em>.pnlfigz</em>, respectively. The Table folder utilizes the <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/user_guide/io.html#io-hdf5">HDFStore</a> interface provided by <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/index.html">Pandas</a> to store data as HDF5 files, and its file extension is <em>*.pnltbz</em>.</p>
+<p>The aforementioned files can be extracted individually from the compressed archive and imported into PyNanoLab. The software also supports exporting each subfolder independently.</p>
+<p>By utilizing this file structure, PyNanoLab ensures efficient storage and organization of project data. The ability to reload data and redraw graphs enables seamless project management and enhances the flexibility of data analysis within the software.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个PyNanoLab项目文件的基本结构</span></span><br><span class="line">model.pnl</span><br><span class="line">├──Folder1.pnlfd</span><br><span class="line">|  ├── Data.pnldat</span><br><span class="line">│  ├── Table.pnltbz</span><br><span class="line">│  ├── Figure.pnlfigz</span><br><span class="line">├──Folder2.pnlfd</span><br><span class="line">|  ├── Data.pnldat</span><br><span class="line">│  ├── Table.pnltbz</span><br><span class="line">│  ├── Figure.pnlfigz</span><br></pre></td></tr></table></figure>
+<p>Although PyNanoLab project files do not have a specific storage limit, it is not recommended to store a large amount of data within a single project file, especially when it involves a significant volume of raw data. Storing excessive data in a single project file can increase the storage size, opening time, and the probability of encountering errors. It is advised to keep the size of individual project files below 4GB to avoid potential issues in certain file systems.</p>
+<p>In the event of encountering errors while opening a project file, an alternative approach is to use file decompression software such as 7z to extract the files within the *.pnl file. The extracted files can then be individually imported into the software or accessed and exported using custom programming methods.</p>
+<h2 id="4-Data"><a href="#4-Data" class="headerlink" title="4. Data"></a>4. Data</h2><p>PyNanoLab organizes imported data into different folders based on their data types for processing. The Data folder primarily handles various non-tabular structured data. You can import data files by using the <kbd>Import</kbd> button in the toolbar or by directly dragging and dropping files onto the tree browser.</p>
+<p>After importing a data file, double-clicking on its entry will create a view window for the data. In PyNanoLab, visualization of sampling data is achieved using the <a target="_blank" rel="noopener" href="https://www.pyqtgraph.org/">Pyqtgraph</a> framework, which enables high-speed data display.</p>
+<h3 id="4-1-Processing-of-sampling-data"><a href="#4-1-Processing-of-sampling-data" class="headerlink" title="4.1 Processing of sampling data"></a>4.1 Processing of sampling data</h3><p><img src="/../../images/ugimgs/4-1.png" alt="Data UI"><br>In PyNanoLab, the file I&#x2F;O interface automatically reads essential information such as sampling rate, filtering, units, and names from the files. For electrophysiological data such as ABF files, they are processed using the SampleDataWidget, as shown in the figure above. The main features of the SampleDataWidget include:</p>
+<ul>
+<li><p><strong>Data browser</strong><br>In the left sidebar tree browser, all sweeps of the data file and the channels under each sweep are listed. By selecting the corresponding channel with the mouse, the data of that channel will be displayed in the plot area.</p>
+</li>
+<li><p><strong>data view</strong><br>The data display area utilizes the line plot functionality of Pyqtgraph. The plot area supports 3-point mouse operations, enabling users to interact with the graph. By right-clicking and dragging on the graph, users can zoom in and pan the view. Additionally, two vertical cursors are added to the plot area to assist in selecting data points within the graph.</p>
+</li>
+<li><p><strong>Toolbar1</strong></p>
+<ul>
+<li><p><img alt="reset" src="../../images/ugimgs/reset_blue.svg" style="vertical-align:middle" width="20" height="20">: Reset. The window retains a backup of the original data. Clicking this button will reset the data to its initial state.</p>
+</li>
+<li><p><img alt="PSD" src="../../images/ugimgs/psd_blue.svg" style="vertical-align:middle" width="20" height="20">: Calculate and plot the power spectral density of data within a cursor interval.</p>
+</li>
+<li><p><img alt="to Table" src="../../images/ugimgs/export_blue.svg" style="vertical-align:middle" width="20" height="20">: Export the data in the cursor interval to the table.</p>
+</li>
+<li><p><img alt="ToMatFile" src="../../images/ugimgs/E-matlab_blue.svg" style="vertical-align:middle" width="20" height="20">: Export the data in the cursor interval to a.mat file in MATLAB.</p>
+</li>
+<li><p><img alt="Detrend" src="../../images/ugimgs/detrend_blue.svg" style="vertical-align:middle" width="20" height="20">: Remove any trends from the data.</p>
+<blockquote>
+<p>After clicking this button, a trendline will appear in the graph, and you can adjust the slope of the trendline by adjusting the anchor points at both ends. Double-clicking on the trendline allows you to add new anchor points. Once you have made the desired adjustments, click the confirmation button to finalize the changes.</p>
+</blockquote>
+</li>
+<li><p><img alt="Reverse" src="../../images/ugimgs/reverse_blue.svg" style="vertical-align:middle" width="20" height="20">: Data flip, take the opposite number of data.</p>
+</li>
+<li><p><img alt="Histogram" src="../../images/ugimgs/histogram_blue.svg" style="vertical-align:middle" width="20" height="20">: Calculate and plot the Histogram of the data within the cursor interval.</p>
+</li>
+<li><p><img alt="dropdate" src="../../images/ugimgs/dropdate_blue.svg" style="vertical-align:middle" width="20" height="20">: Deleting the data in the cursor interval can be used to remove the abnormal interval in the data.</p>
+</li>
+<li><p><img alt="concat" src="../../images/ugimgs/concat_blue.svg" style="vertical-align:middle" width="20" height="20">: Merge data from multiple sweeps into one sweeps.</p>
+</li>
+<li><p><img alt="extend Cursors" src="../../images/ugimgs/arrowsbirection_blue.svg" style="vertical-align:middle" width="20" height="20">: Place the cursor to the largest position and select all data.</p>
+</li>
+<li><p><img alt="Bring Cursors" src="../../images/ugimgs/cursor_blue.svg" style="vertical-align:middle" width="20" height="20">: Place all cursors within the visible area.</p>
+</li>
+<li><p><img alt="Bring Cursors1" src="../../images/ugimgs/cursor1_blue.svg" style="vertical-align:middle" width="20" height="20">: Place cursor 1 in the viewable area.</p>
+</li>
+<li><p><img alt="Bring Cursors2" src="../../images/ugimgs/cursor2_blue.svg" style="vertical-align:middle" width="20" height="20">: Place cursor 2 in the viewable area.</p>
+</li>
+<li><p><img alt="autoscale" src="../../images/ugimgs/scale_blue.svg" style="vertical-align:middle" width="20" height="20">: Automatically scale graphics.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>工具栏1</strong></p>
+<ul>
+<li><p><img alt="Nanopore" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20">: **Nanopore analysis.**，<br>In version 3.0, we recommend using the nanopore toolbox for nanopore signal processing. For details, please refer to the section<a href="#71-%E7%BA%B3%E7%B1%B3%E5%AD%94%E5%B7%A5%E5%85%B7%E7%AE%B1">7.1</a>。</p>
+</li>
+<li><p><img alt="denoise" src="../../images/ugimgs/denoise_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Denoise</strong>。<br> <img src='../../images/ugimgs/4-2.png' margin-right=100 width=500> </img><br> This tool contains several algorithms for data noise reduction. As shown in the figure, select the algorithm to be used in method and set the corresponding parameters below.<em>between curose</em> only data between cursors is processed，<em>Full Trace</em> processe all data。After setting, you can click <button>Preview</button> to preview the effect, and then click <button>Apply</button> to apply to the original data.</p>
+</li>
+<li><p><img alt="Filter" src="../../images/ugimgs/fillter_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Filter</strong><br> <img src="/../../images/ugimgs/4-3.png" alt="Alt text"><br> Includes butter and bessl type low-pass, high-pass, band-pass and band-stop filters. Use <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bessel.html#scipy.signal.bessel">scipy.signal.bessel</a> and <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html#scipy.signal.butter">scipy.signal.butter</a>。</p>
+</li>
+<li><p><img alt="Baseline" src="../../images/ugimgs/baseline_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Baseline Fit</strong><br> <img src="/../../images/ugimgs/4-4.png" alt="Alt text"><br>Used for baseline correction of data, obtaining the baseline of data or removing the baseline to smooth the data. Using <a target="_blank" rel="noopener" href="https://pybaselines.readthedocs.io/en/latest/">pybaselines</a>。segmentation indicates whether the data is divided. The sampled data usually has a large amount of data, and directly searching for the baseline of all signals will occupy a large amount of memory or cause the system to crash. Here, we can group the data for calculation, and the value set to 0 indicates that no grouping is performed. For parameter Settings of each algorithm, refer to <a target="_blank" rel="noopener" href="https://pybaselines.readthedocs.io/en/latest/algorithms/index.html">pybaselines</a></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/baseline_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Eval</strong><br>  <img src="/../../images/ugimgs/4-5.png" alt="Alt text"><br>  Using expressions to eval data, support <a target="_blank" rel="noopener" href="https://numexpr.readthedocs.io/en/latest/user_guide.html#supported-operators">numexpr</a>，You can select all supported operations and functions from the drop-down list. local var lists the variables that represent the data, Operator lists the supported operations, and Functions lists the symbols for all supported functions. For example, input: <code>sin(IN0+100)</code>, which means +100 for the data of the first channel and assign the value to the current preview channel after calculating the sine value.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/splets_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>time-frequency spectrum</strong>，An algorithm for calculating time spectrum, please refer to <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41467-020-20539-9">10.1038&#x2F;s41467-020-20539-9</a>。</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/nanopore_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Nanopore Toolbox</strong>，By clicking this button, the data between the cursors will be transferred to the nanopore toolbox for further processing.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-Processing-of-spectral-data"><a href="#4-2-Processing-of-spectral-data" class="headerlink" title="4.2 Processing of spectral data"></a>4.2 Processing of spectral data</h3><p>   to be continued …</p>
+<h2 id="5-Table"><a href="#5-Table" class="headerlink" title="5. Table"></a>5. Table</h2><p>PyNanoLab has built a table tool similar to Excel and OriginLab. It uses pandas for data management and calculations, and QTableView for data display and interaction. You can directly import external data into the Table folder using the <kbd>Import</kbd> button. For text files, we have created a data import wizard to assist with data loading. In addition, PyNanoLab also supports importing numpy’s npy, npz, and MATLAB files.</p>
+<p>The table tool in PyNanoLab supports multiple worksheets, where each worksheet consists of a data table and a corresponding information table (similar to OriginLab). The information table primarily records data attributes such as “Name,” “Unit,” and “Type” signals.</p>
+<p>Each Table includes a log file that can automatically or manually record information about the file. The log supports Markdown formatting and can be accessed from the top right corner of the table window.</p>
+<p>This feature allows you to maintain organized and structured data management within PyNanoLab’s table tool, with separate tables for data and associated metadata. The log file provides a convenient way to track and document any relevant information or changes made to the table.</p>
+<p>The table window in PyNanoLab keeps a record of the last 10 steps performed, allowing you to undo up to 10 actions. This feature provides flexibility in reverting changes or correcting mistakes within your data analysis workflow. It’s important to note that when you close the table window, the history of actions will be cleared, resulting in the loss of the data’s history. However, closing the window does not delete the data itself.</p>
+<p>While the history record feature enhances usability, it’s essential to strike a balance as having too many history records can consume system resources. Therefore, it’s advisable to manage the number of recorded steps based on your specific requirements and available system resources.</p>
+<p>PyNanoLab’s table tool offers a straightforward and intuitive user experience for most operations. Here, let me introduce a few notable features:</p>
+<ul>
+<li><p><strong>Data Export</strong><br><img src="/../../images/ugimgs/5-1.png" alt="Alt text"><br>在列表浏览器中右键即可找到文件导出的入口，同时也可以选择复选框选中多个文件同时导出。</p>
+</li>
+<li><p><strong>Set plot Label</strong><br><img src="/../../images/ugimgs/5-2.png" alt="Alt text"><br> In the context of data visualization, it’s important to specify the labels for the X and Y axes of your data. In PyNanoLab’s table tool, you can easily set the plot labels for columns by following these steps:</p>
+<ol>
+<li>In the information table, select the column(s) for which you want to set the plot labels.</li>
+<li>Right-click on the selected column(s).</li>
+<li>From the context menu, choose “<kbd>Set plot label as</kbd>“.</li>
+<li>Select the desired symbol or representation for the plot label.</li>
+<li>The plot labels will be displayed on the corresponding column header(s). By setting the plot labels, you can ensure that your data is appropriately labeled and easily identifiable during the visualization process.</li>
+</ol>
+</li>
+<li><p><strong>Set Data Types</strong><br>The same operation is used to change the data type of each column of data.</p>
+</li>
+<li><p><strong>Data query</strong><br><img src="/../../images/ugimgs/5-3.png" alt="Alt text"></p>
+</li>
+</ul>
+<p>PyNanoLab offers powerful and convenient filtering capabilities, supporting the expression formats of both <a target="_blank" rel="noopener" href="https://numexpr.readthedocs.io/en/latest/user_guide.html#supported-operators">numexpr</a> and <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html#pandas.DataFrame.query">pandas</a>. The filtering results can be directly generated in a new table. Taking the example given in the previous context, let’s consider the expression <code>A&gt;15 and B&gt;0.2</code>. Here, “A” and “B” are unique identifiers for each column of data, and you can perform multiple boolean operations for filtering simultaneously.</p>
+<p>By leveraging the filtering capabilities of PyNanoLab, you can easily extract and analyze data based on specific criteria, facilitating efficient data exploration and analysis.</p>
+<p>   EXAMPLES:<br>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A &gt; <span class="number">15</span>  <span class="keyword">and</span> (B &gt; <span class="number">0.2</span> <span class="keyword">or</span> B &lt; <span class="number">0</span>) </span><br><span class="line">sin(A)&gt;<span class="number">0.5</span></span><br><span class="line">A+B&gt;<span class="number">12</span> <span class="keyword">and</span> (B &lt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p><strong>Find and replace</strong><br><img src="/../../images/ugimgs/5-4.png" alt="Alt text"><br> Find and replace numbers and strings that meet the conditions, and support regular expressions <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.replace.html">pandas.Series.replace</a></p>
+<p>As shown in the figure above: Replace the numbers greater than 15 in columns A and B with 10.</p>
+</li>
+<li><p><strong>Copy</strong><br>In PyNanoLab, to enhance performance, the table data is displayed in pages. As a result, directly selecting and copying all the data in the table will only capture a maximum of 1000 rows. Therefore, if you need to copy the entire table’s data to software like Excel or other applications, you should use the copy button available in the toolbar. This button allows you to copy all the data from the selected columns.</p>
+</li>
+<li><p><strong>Split</strong><br>For string data types only, a column of data is divided into multiple columns based on matching symbols, similar to Excel’s column function.</p>
+</li>
+<li><p><strong>Eval</strong><br><img src="/../../images/ugimgs/5-5.png" alt="Alt text"><br>PyNanoLab supports direct computation of table data using expressions, similar to the formula functionality in Excel. The software provides two methods for computation: one is to input the expression in the calculation dialog box, and the other is to input the expression directly in the <strong>Func</strong> cell in the table header.</p>
+<ol>
+<li><p>Calculation dialog box:</p>
+<p> Click the calculation button in the toolbar to open the calculation dialog box.<br> In the calculation dialog box, enter the expression you want to apply to the selected cell or column.</p>
+<p> For example, <code>H=A+sin(B)</code>, where the result of the calculation is assigned to the column named  <code>H</code>.</p>
+</li>
+<li><p>Directly inputting expression in the “Func” cell:</p>
+<p> Select the “Func” cell in the table header of the desired column. By default, the result will be assigned to the current column.</p>
+</li>
+</ol>
+</li>
+<li><p><strong>concatenating and merging</strong></p>
+<p>PyNanoLab supports merging and concatenating workbooks within a single sheet. You can merge workbooks from different tables by using drag-and-drop with the mouse.</p>
+<p>Workbook concatenation is performed using <code>pandas.concat</code> function, which combines two tables along a specified axis. This is mainly used to add new rows or columns to the data.</p>
+<p>Workbook merging is performed using <code>pandas.merge</code> function, which updates the data in an old table with a new table, similar to database updating.</p>
+<p>For detailed information and examples, please refer to the <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/user_guide/merging.html">Pandas userguide</a>. Choose the appropriate operation based on your specific requirements.</p>
+</li>
+</ul>
+<h2 id="6-Visualization"><a href="#6-Visualization" class="headerlink" title="6. Visualization"></a>6. Visualization</h2><p>  PyNanoLab has built a comprehensive plotting tool using the matplotlib library. Combined with the table tool built with pandas, it enables GUI interactive plotting with the matplotlib library. You can set, save, and reload various parameters of the plot using the GUI interface without writing any code. Currently, PyNanoLab supports data visualization of various types of plots, including line plots, scatter plots, bar plots, histogram plots, and contour plots.</p>
+<p>  With PyNanoLab’s plotting tool, you can easily visualize your data and customize the plot settings without the need for manual coding. It provides a user-friendly interface for interactive plotting and offers a range of plot types to suit your data analysis needs.</p>
+<p>matplotlib’s drawing is divided into three levels:</p>
+<ul>
+<li><p>Figure：<br>A Figure represents the drawing area on a canvas. It serves as the top-level container for all the elements in a plot. A Figure is typically created using <code>plt.Figure()</code>.</p>
+</li>
+<li><p>Axes:<br>An Axes represents a coordinate system on a Figure. Multiple Axes can coexist on a single canvas. Each Axes consists of x and y axes, along with corresponding ticks, tick labels, and axis labels. PyNanoLab uses the same type of coordinate system for all 2D plots, allowing control over the properties of all axes.</p>
+</li>
+<li><p>Artist：<br>An Artist represents the specific objects drawn on the coordinate system, such as curves, scatter plots, etc. By using different Artists, various types of data plots can be created.</p>
+</li>
+</ul>
+<p>PyNanoLab reorganizes the drawing objects of matplotlib and provides independent GUI parameter settings tools for each type of Artist, enabling interactive plotting without the need for complex coding processes.</p>
+<p>To create plots in PyNanoLab, you simply need to set the corresponding plot labels for the data columns in the table, and then select the appropriate plot type button for the selected data.</p>
+<p><img src="/../../images/ugimgs/6-1.png" alt="Alt text"><br>As shown in the above image, PyNanoLab’s plot window consists of a toolbar, an object browser, and a plotting area. The object browser lists the structure of all elements in the plot. Each plot can have multiple axes, and each axis can contain multiple plot objects (artists).</p>
+<ul>
+<li><p><strong>Merge of figure</strong><br>PyNanoLab supports dragging and dropping plot objects from one axis to another. This allows for merging of plot elements between different axes and figures.<br><img src="/../../images/ugimgs/6-2.gif" alt="Alt text"></p>
+</li>
+<li><p><strong>Customed axes grid</strong><br>In addition, PyNanoLab allows for custom plotting methods, where you can create complex coordinate system layouts and then place pre-drawn plot objects into their respective axes. This enables the construction of intricate and sophisticated visualizations.</p>
+<p>Clicking on the <kbd>Custom Plot</kbd> option under the plotting menu will open a wizard dialog.    </p>
+<p><strong>Step 1:</strong> Set the size of the figure and the axes grid. The axes grid helps in dividing the figure into a grid, making it easier to place the coordinate systems. A coordinate system can occupy multiple grid cells, so this method can be used to set the proportional size of the coordinate systems.</p>
+<p><img src="/../../images/ugimgs/6-3.png" alt="Alt text"></p>
+<p><strong>Step 2:</strong> After setting up the grid in the first step, a corresponding table is generated. To create a coordinate system, select the cell(s) where you want to create the coordinate system and click the <kbd>Add Axes</kbd> button. This will mark the selected area as a coordinate system.<br><img src="/../../images/ugimgs/6-4.png" alt="Alt text"></p>
+<p><strong>Step 3:</strong> Set the corresponding type for each coordinate system, default is 2D map.<br><img src="/../../images/ugimgs/6-5.png" alt="Alt text"></p>
+<p><strong>Step 4:</strong> Preview the created coordinate system and go back to the previous step to reset it if it does not meet the requirements.</p>
+<p><img src="/../../images/ugimgs/6-6.png" alt="Alt text"><br>Finally, we drag the Artist drawn in the other drawings to the corresponding coordinate system to generate a complex graph</p>
+<p><img src="/../../images/ugimgs/6-7.png" alt="Alt text"></p>
+<p>The whole process is shown as follows:<br><img src="/../../images/ugimgs/6-8.gif" alt="Alt text"></p>
+<p>For more graphic drawing methods, please refer to <a href="../../2023/05/29/vis/">用PyNanoLab进行数据可视化</a></p>
+</li>
+</ul>
+<h2 id="7-Toolbox"><a href="#7-Toolbox" class="headerlink" title="7. Toolbox"></a>7. Toolbox</h2><h3 id="7-1-Nanopore-Toolbox"><a href="#7-1-Nanopore-Toolbox" class="headerlink" title="7.1 Nanopore Toolbox"></a>7.1 Nanopore Toolbox</h3><p><img src="/../../images/ugimgs/7-1.png" alt="Alt text"></p>
+<p>The Nanopore Toolbox is primarily used for the extraction and analysis of nanopore signals. Its main interface consists of a toolbar, a signal list, a plotting area, and a result table. The raw data for the Nanopore Toolbox can be directly imported from the Data widget on the main interface, where the data within the cursor range can be imported and stored as an independent *.pnlmd file. This file stores all the raw data and analysis results in the internal storage structure of PyTables’ HDF5 file format, allowing for easy re-importation into the Toolbox for further analysis. The standalone Nanopore Toolbox enables more complex signal analysis and batch processing, while also facilitating the integration of new features. Its main functionalities include:</p>
+<ul>
+<li><p><img alt="eval" src="../../images/ugimgs/import_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Import Model:</strong> Import the stored *.pnlmd  file.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/save-file-option_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Save Modle:</strong> Save to *.pnlmd file.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/export_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Export data:</strong> Export data to a file or the Table widget of PyNanoLab. Contains two functions: one is to export the signal analysis results to the file or the main interface; One is to export raw data.</p>
+<p><img src="/../../images/ugimgs/7-2.png" alt="Alt text"></p>
+</li>
+</ul>
+<p>  Export Raw data You can export the original data and fitted signals to one or multiple files for subsequent analysis using customized scripts and software.</p>
+<ul>
+<li><p><img alt="eval" src="../../images/ugimgs/lineview_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Plot raw data:</strong> Visualize the original data. It is necessary to display the original data and set the parameters for signal analysis.</p>
+</li>
+<li></li>
+<li><p><img alt="eval" src="../../images/ugimgs/corr_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Plot fit data:</strong> Drawing the original data and the fitting result together can easily check the analysis quality of the signal.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/scale_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Autoscale</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Signal extract</strong>：Entrance for automatic signal analysis of nanopore.</p>
+<p><img src="/../../images/ugimgs/7-3.png" alt="Alt text"><br>As shown in the figure above, the preprocessing part is to preprocess the data for noise reduction in signal analysis. Before automated analysis. Some parameters need to be set manually to help the program find and analyze the signal, as explained below:</p>
+<ul>
+<li><p><strong>Model:</strong> Select the signal analysis method. For the results of each method, refer to the following result graph.</p>
+</li>
+<li><p><strong>Baseline:</strong> Set the baseline of the signal, that is, the opening current. You can select the baseline by dragging the line in drawing.</p>
+</li>
+<li><p><strong>Threhold:</strong> Set a signal threshold. Signals greater than or less than this value are analyzed.</p>
+</li>
+<li><p><strong>Direction:</strong> “Whether the signal is above or below the baseline. Tips: In nanopore analysis, we usually use the terms “blockade” or “enhancement” to describe the behavior of a signal. Here we use the term “Direction” because in a negative voltage blockade signal, the numerical value of the signal (e.g., -100) is greater than the numerical value of the baseline (e.g., -200). Therefore, using the terms “blockade” and “enhancement” in numerical-based signal analysis can lead to confusion. In future versions, we will remove this option and automatically determine the signal direction based on the set baseline and threshold.</p>
+</li>
+<li><p><strong>fluctuation</strong>: The value of signal noise. It is an important parameter in finding the signal within the threshold range. It is set as the upper and lower fluctuation range of the baseline noise, or more precisely, the average difference between the upper extreme point and the lower extreme point of the baseline.</p>
+</li>
+<li><p><strong>fluctuation2</strong>: Same as the above parameters. Used in multi-step analysis, this value is used when finding multiple steps inside the signal to avoid errors caused by excessive noise difference between the baseline and the signal. Setting this to 0 means using fluctuation.</p>
+</li>
+<li><p><strong>ignore time less</strong>：In multi-step analysis, steps whose duration is less than this value are ignored.</p>
+</li>
+<li><p><strong>ClusterNum</strong>： In the multistepsKmeans method, set the maximum number of steps expected by the signal.</p>
+</li>
+<li><p><strong>Kernel Size</strong>：kernels of Kmeans  method.</p>
+</li>
+<li><p><strong>Sigma</strong>：The parameter used by the extremejump algorithm, which only needs this one parameter to find the signal in the fluctuation of the baseline noise in excess of this multiple, without requiring baseline leveling.</p>
+</li>
+<li><p><strong>BaseLineNum</strong>：Parameter of the faradayStep algorithm: indicates how many data points are used to calculate the baseline.</p>
+</li>
+<li><p><strong>StopNum</strong>：Parameter of the faradayStep algorithm: indicates how many data points are used to determine the end of the signal.</p>
+</li>
+<li><p><strong>StopDiff</strong>：Parameter of the faradayStep algorithm: indicates the error to determine the end of the signal.</p>
+</li>
+</ul>
+<p><img src="/../../images/ugimgs/7-4.png" alt="Alt text"></p>
+<p>Among the above algorithms, <em>singleStepOriginal, singleStepReduced, singleStepAdept2</em> are used for single-step signal processing. <em>multistepspnl, multiStepkmeans，IDMS</em> are used for multi-steps signal processing. </p>
+<p>singleStepAdept2 and singleStepAdept2 algorithm is derived from <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.analchem.6b03725">MOSAIC</a>， and we use a better way to implement the algorithm. All other algorithms are independently developed by PyNanoLab.</p>
+<p>In the IDMS method, a single signal needs to be processed in multiple steps. The <em>cutignal</em> algorithm is used to segment the signal in advance.</p>
+<ul>
+<li><p><strong>Signal preview</strong><br>In the nanopore toolbox, there are two preview methods for the analyzed signal. One is to click <kbd>fitplot</kbd> in the toolbar to draw the fitting signal and preview all the results of the analysis globally. In addition, individual signals can be previewed one by one by clicking on the signal list.</p>
+</li>
+<li><p><strong>Signal Modify</strong><br>In the nanopore toolbox, you can manually modify the analyzed signals after the initial analysis. By clicking <kbd>View mode</kbd> button below the plotting area, you can switch between the preview mode and the editing mode. In the editing mode, when you click on each signal, the plot will display lines representing the steps of the signal. You can drag each line to modify the analysis results in real-time. Additionally, you can click <kbd>Reset</kbd> to delete analysis results and use the manual mode for analysis.</p>
+</li>
+<li><p><strong>Manual analysis of signals</strong><br>By double-clicking on the data points in the graph, you can mark the start and end positions of the signal steps. After marking the positions, you can click the <kbd>Confirm</kbd> button to recalculate the results.<br><img src="/../../images/ugimgs/7-5.gif" alt="Alt text"></p>
+</li>
+</ul>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/manual_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Manual addition of signals</strong>：Manually adding signals to the signal list. This is used to handle signals with high noise fluctuations and uneven baselines, where automatic signal extraction is not possible.<br>  <img src="/../../images/ugimgs/7-6.gif" alt="Alt text"></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/reset_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Reset signal</strong>：Reset all signals to unanalyzed state.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/clear_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>del signal</strong>：Delete all signals from the signal list.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/infochart_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Info Fig</strong>：Automatically generate a statistical plot of the nanopore results.</p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/psd_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Batch calculates the PSD for each signal</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/stft_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Batch calculates the STFT for each signal</strong></p>
+</li>
+<li><p><img alt="eval" src="../../images/ugimgs/splets_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Batch calculates the  time-frequency spectrum for each signal，using superlets algorithm</strong></p>
+</li>
+</ul>
+<h3 id="7-2-Curve-fitting-toolbox"><a href="#7-2-Curve-fitting-toolbox" class="headerlink" title="7.2 Curve fitting toolbox"></a>7.2 Curve fitting toolbox</h3><h3 id="7-3-Clustering-toolbox"><a href="#7-3-Clustering-toolbox" class="headerlink" title="7.3 Clustering toolbox"></a>7.3 Clustering toolbox</h3><h2 id="8-Advanced"><a href="#8-Advanced" class="headerlink" title="8. Advanced"></a>8. Advanced</h2><h3 id="8-1-iPython-Console"><a href="#8-1-iPython-Console" class="headerlink" title="8.1 iPython Console"></a>8.1 iPython Console</h3><h2 id="9-FAQ"><a href="#9-FAQ" class="headerlink" title="9. FAQ"></a>9. FAQ</h2>
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shaochuang Liu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

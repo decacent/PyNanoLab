@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="141.12pt" height="141.12pt" viewBox="0 0 141.12 141.12" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2023-01-01T20:55:41.698276</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 141.12 
+L 141.12 141.12 
+L 141.12 0 
+L 0 0 
+L 0 141.12 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 70.560002 15.794765 
+C 61.361461 15.794765 52.309472 18.112271 44.242627 22.532585 
+C 36.175782 26.952899 29.351126 33.33517 24.400904 41.088136 
+C 19.450683 48.841101 16.532633 57.717717 15.917087 66.89564 
+C 15.301541 76.073563 17.008112 85.260343 20.878702 93.604904 
+L 70.560002 70.560438 
+L 70.560002 15.794765 
+z
+" style="fill: #1f77b4"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 20.878702 93.604904 
+C 26.468067 105.654952 36.25497 115.269368 48.402489 120.643605 
+C 60.550009 126.017842 74.247426 126.793227 86.923848 122.824226 
+L 70.560002 70.560438 
+L 20.878702 93.604904 
+z
+" style="fill: #ff7f0e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 86.923848 122.824226 
+C 97.135891 119.626825 106.190302 113.505401 112.962615 105.220176 
+C 119.734927 96.93495 123.932683 86.843714 125.034562 76.199699 
+L 70.560002 70.560438 
+L 86.923848 122.824226 
+z
+" style="fill: #2ca02c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 125.034562 76.199699 
+C 125.824074 68.573108 125.003242 60.865036 122.625337 53.575744 
+C 120.247432 46.286451 116.365035 39.577119 111.230118 33.883189 
+C 106.0952 28.189259 99.821305 23.636635 92.815613 20.520787 
+C 85.809922 17.404939 78.227345 15.794765 70.559997 15.794765 
+L 70.560002 70.560438 
+L 125.034562 76.199699 
+z
+" style="fill: #d62728"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="font: 10px 'Times New Roman', serif; text-anchor: end" x="19.784995" y="40.543249" transform="rotate(-0 19.784995 40.543249)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #ffffff; font: 10px 'Times New Roman', serif; text-anchor: middle" x="42.864543" y="55.2794" transform="rotate(-0 42.864543 55.2794)">31.9%</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'Times New Roman', serif; text-anchor: end" x="46.186738" y="128.054265" transform="rotate(-0 46.186738 128.054265)">b</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #ffffff; font: 10px 'Times New Roman', serif; text-anchor: middle" x="57.265494" y="103.012682" transform="rotate(-0 57.265494 103.012682)">22.9%</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 10px 'Times New Roman', serif; text-anchor: start" x="117.202876" y="111.088493" transform="rotate(-0 117.202876 111.088493)">c</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #ffffff; font: 10px 'Times New Roman', serif; text-anchor: middle" x="96.00157" y="93.758625" transform="rotate(-0 96.00157 93.758625)">18.5%</text>
+   </g>
+   <g id="text_7">
+    <text style="font: 10px 'Times New Roman', serif; text-anchor: start" x="115.297129" y="32.617807" transform="rotate(-0 115.297129 32.617807)">d</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #ffffff; font: 10px 'Times New Roman', serif; text-anchor: middle" x="94.962071" y="50.956432" transform="rotate(-0 94.962071 50.956432)">26.6%</text>
+   </g>
+  </g>
+ </g>
+</svg>

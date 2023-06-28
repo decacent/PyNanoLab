@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="141.732283pt" height="141.732283pt" viewBox="0 0 141.732283 141.732283" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2022-03-20T21:18:50.815223</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.5.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 141.732283 
+L 141.732283 141.732283 
+L 141.732283 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 10.913386 132.094488 
+L 131.669291 132.094488 
+L 131.669291 5.385827 
+L 10.913386 5.385827 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m7f508f9aae" d="M 0 0 
+L -5.5 0 
+" style="stroke: #0000ff; stroke-width: 4.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7f508f9aae" x="10.913386" y="132.094488" style="fill: #0000ff; stroke: #0000ff; stroke-width: 4.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m7f508f9aae" x="10.913386" y="100.747252" style="fill: #0000ff; stroke: #0000ff; stroke-width: 4.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m7f508f9aae" x="10.913386" y="69.400017" style="fill: #0000ff; stroke: #0000ff; stroke-width: 4.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m7f508f9aae" x="10.913386" y="38.052781" style="fill: #0000ff; stroke: #0000ff; stroke-width: 4.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m7f508f9aae" x="10.913386" y="6.705545" style="fill: #0000ff; stroke: #0000ff; stroke-width: 4.5"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_6">
+    <path d="M -1 35.888239 
+L 9.876834 41.13054 
+L 23.669329 56.978508 
+L 37.461824 23.62861 
+L 51.254319 23.907124 
+L 65.046813 43.688779 
+L 78.839308 46.470741 
+L 92.631803 46.402791 
+L 106.424298 53.455843 
+L 120.216793 18.403962 
+L 134.009287 12.588683 
+L 142.732283 33.707495 
+" clip-path="url(#pad030d23af)" style="fill: none; stroke: #1f77b4; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 10.913386 132.094488 
+L 10.913386 5.385827 
+" style="fill: none; stroke: #1f77b4; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 131.669291 132.094488 
+L 131.669291 5.385827 
+" style="fill: none; stroke: #1f77b4; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="matplotlib.axis_3">
+    <g id="ytick_6">
+     <g id="line2d_7">
+      <defs>
+       <path id="m26e0d07531" d="M 0 0 
+L 5.5 0 
+" style="stroke: #ff0000; stroke-width: 3.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#m26e0d07531" x="131.669291" y="132.094488" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m26e0d07531" x="131.669291" y="100.417323" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m26e0d07531" x="131.669291" y="68.740157" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m26e0d07531" x="131.669291" y="37.062992" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3.5"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m26e0d07531" x="131.669291" y="5.385827" style="fill: #ff0000; stroke: #ff0000; stroke-width: 3.5"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M -1 69.036516 
+L 9.876834 80.398848 
+L 23.669329 98.236322 
+L 37.461824 93.746807 
+L 51.254319 81.038882 
+L 65.046813 81.242119 
+L 78.839308 88.853035 
+L 92.631803 82.40084 
+L 106.424298 112.570303 
+L 120.216793 73.898748 
+L 134.009287 95.700941 
+L 142.732283 68.189497 
+" clip-path="url(#pad030d23af)" style="fill: none; stroke: #ff7f0e; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 10.913386 132.094488 
+L 10.913386 5.385827 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 131.669291 132.094488 
+L 131.669291 5.385827 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 10.913386 132.094488 
+L 131.669291 132.094488 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 10.913386 5.385827 
+L 131.669291 5.385827 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pad030d23af">
+   <rect x="10.913386" y="5.385827" width="120.755906" height="126.708661"/>
+  </clipPath>
+ </defs>
+</svg>

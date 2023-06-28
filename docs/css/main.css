@@ -18,10 +18,10 @@
   --btn-default-hover-bg: #fff;
   --btn-default-hover-color: #222;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f3f3f3;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #212121;
+  --highlight-foreground: #eff;
+  --highlight-gutter-background: #353737;
+  --highlight-gutter-foreground: #d9e8e8;
   color-scheme: light;
 }
 html {
@@ -30,9 +30,6 @@ html {
 }
 body {
   margin: 0;
-}
-main {
-  display: block;
 }
 h1 {
   font-size: 2em;
@@ -239,7 +236,8 @@ iframe,
 img,
 video,
 embed {
-  display: block;
+  margin-bottom: 0px;
+  vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -364,14 +362,35 @@ td {
   transform: rotate(45deg);
 }
 /*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+  Theme: Material Darker
+  Author: Nate Peterson
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
   Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
-*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#f3f3f3;color:#444}.hljs-comment{color:#697070}.hljs-punctuation,.hljs-tag{color:#444a}.hljs-tag .hljs-attr,.hljs-tag .hljs-name{color:#444}.hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-name,.hljs-selector-tag{font-weight:700}.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#800}.hljs-section,.hljs-title{color:#800;font-weight:700}.hljs-link,.hljs-operator,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#ab5656}.hljs-literal{color:#695}.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta .hljs-string{color:#38a}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#eff;background:#212121}.hljs ::selection,.hljs::selection{background-color:#353535;color:#eff}.hljs-comment{color:#4a4a4a}.hljs-tag{color:#b2ccd6}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#eff}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#f07178}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#f78c6c}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#ffcb6b}.hljs-strong{font-weight:700;color:#ffcb6b}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#c3e88d}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#89ddff}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#82aaff}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#c792ea}.hljs-emphasis{color:#c792ea;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#ff5370}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+figure.highlight .table-container {
+  position: relative;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
+}
 code,
 kbd,
 figure.highlight,
@@ -1749,7 +1768,7 @@ pre code {
 .post-body img,
 .post-body video,
 .post-body embed {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .post-body .video-container {
   height: 0;
@@ -2354,7 +2373,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #5870ff;
+  background: #ff4efb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2397,4 +2416,7 @@ header.header {
   .sidebar-dimmer {
     display: none;
   }
+}
+.archive .collection-title {
+  display: none !important;
 }

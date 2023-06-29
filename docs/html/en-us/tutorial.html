@@ -86,8 +86,8 @@
 <meta property="og:image" content="http://pynanolab.com/images/ugimgs/psd_blue.svg">
 <meta property="og:image" content="http://pynanolab.com/images/ugimgs/stft_blue.svg">
 <meta property="og:image" content="http://pynanolab.com/images/ugimgs/splets_blue.svg">
-<meta property="article:published_time" content="2023-06-28T12:48:02.138Z">
-<meta property="article:modified_time" content="2023-06-28T12:48:02.138Z">
+<meta property="article:published_time" content="2023-06-29T01:25:12.641Z">
+<meta property="article:modified_time" content="2023-06-29T01:25:12.641Z">
 <meta property="article:author" content="Shaochuang Liu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://pynanolab.com/images/ugimgs/image3-1.png">
@@ -149,7 +149,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-installation"><a href="/html/install" rel="section"><i class="fa fa-download fa-fw"></i>Installation</a></li><li class="menu-item menu-item-tutorial"><a href="/html/en-us/tutorial" rel="section"><i class="fa fa-download fa-fw"></i>Tutorial</a></li><li class="menu-item menu-item-blog"><a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Blog</a></li><li class="menu-item menu-item-changelog"><a href="/html/changelog" rel="section"><i class="fa fa-undo fa-fw"></i>Changelog</a></li><li class="menu-item menu-item-about"><a href="/html/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-installation"><a href="/html/install" rel="section"><i class="fa fa-download fa-fw"></i>Installation</a></li><li class="menu-item menu-item-tutorial"><a href="/html/en-us/tutorial" rel="section"><i class="fa fa-book fa-fw"></i>Tutorial</a></li><li class="menu-item menu-item-blog"><a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Blog</a></li><li class="menu-item menu-item-changelog"><a href="/html/changelog" rel="section"><i class="fa fa-undo fa-fw"></i>Changelog</a></li><li class="menu-item menu-item-about"><a href="/html/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
   </ul>
 </nav>
 
@@ -322,11 +322,13 @@
 </li>
 </ul>
 </li>
-<li><p><strong>工具栏1</strong></p>
+<li><p><strong>Toolbar2</strong></p>
 <ul>
-<li><p><img alt="Nanopore" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20">: **Nanopore analysis.**，<br>In version 3.0, we recommend using the nanopore toolbox for nanopore signal processing. For details, please refer to the section<a href="#71-%E7%BA%B3%E7%B1%B3%E5%AD%94%E5%B7%A5%E5%85%B7%E7%AE%B1">7.1</a>。</p>
-</li>
-<li><p><img alt="denoise" src="../../images/ugimgs/denoise_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Denoise</strong>。<br> <img src='../../images/ugimgs/4-2.png' margin-right=100 width=500> </img><br> This tool contains several algorithms for data noise reduction. As shown in the figure, select the algorithm to be used in method and set the corresponding parameters below.<em>between curose</em> only data between cursors is processed，<em>Full Trace</em> processe all data。After setting, you can click <button>Preview</button> to preview the effect, and then click <button>Apply</button> to apply to the original data.</p>
+<li><img alt="Nanopore" src="../../images/ugimgs/extract_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Nanopore analysis</strong></li>
+</ul>
+<p>In version 3.0, we recommend using the nanopore toolbox for nanopore signal processing. For details, please refer to the section<a href="#71-%E7%BA%B3%E7%B1%B3%E5%AD%94%E5%B7%A5%E5%85%B7%E7%AE%B1">7.1</a>。</p>
+<ul>
+<li><p><img alt="denoise" src="../../images/ugimgs/denoise_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Denoise</strong><br> <img src='../../images/ugimgs/4-2.png' margin-right=100 width=500> </img><br> This tool contains several algorithms for data noise reduction. As shown in the figure, select the algorithm to be used in method and set the corresponding parameters below.<em>between curose</em> only data between cursors is processed，<em>Full Trace</em> processe all data。After setting, you can click <button>Preview</button> to preview the effect, and then click <button>Apply</button> to apply to the original data.</p>
 </li>
 <li><p><img alt="Filter" src="../../images/ugimgs/fillter_blue.svg" style="vertical-align:middle" width="20" height="20">: <strong>Filter</strong><br> <img src="/../../images/ugimgs/4-3.png" alt="Alt text"><br> Includes butter and bessl type low-pass, high-pass, band-pass and band-stop filters. Use <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bessel.html#scipy.signal.bessel">scipy.signal.bessel</a> and <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html#scipy.signal.butter">scipy.signal.butter</a>。</p>
 </li>
@@ -350,7 +352,7 @@
 <p>While the history record feature enhances usability, it’s essential to strike a balance as having too many history records can consume system resources. Therefore, it’s advisable to manage the number of recorded steps based on your specific requirements and available system resources.</p>
 <p>PyNanoLab’s table tool offers a straightforward and intuitive user experience for most operations. Here, let me introduce a few notable features:</p>
 <ul>
-<li><p><strong>Data Export</strong><br><img src="/../../images/ugimgs/5-1.png" alt="Alt text"><br>在列表浏览器中右键即可找到文件导出的入口，同时也可以选择复选框选中多个文件同时导出。</p>
+<li><p><strong>Data Export</strong><br><img src="/../../images/ugimgs/5-1.png" alt="Alt text"><br>Right-click in the list browser to find the file export entry, or select the check box to select multiple files to export at the same time</p>
 </li>
 <li><p><strong>Set plot Label</strong><br><img src="/../../images/ugimgs/5-2.png" alt="Alt text"><br> In the context of data visualization, it’s important to specify the labels for the X and Y axes of your data. In PyNanoLab’s table tool, you can easily set the plot labels for columns by following these steps:</p>
 <ol>
@@ -440,7 +442,6 @@
 <ul>
 <li><p><img alt="eval" src="../../images/ugimgs/lineview_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Plot raw data:</strong> Visualize the original data. It is necessary to display the original data and set the parameters for signal analysis.</p>
 </li>
-<li></li>
 <li><p><img alt="eval" src="../../images/ugimgs/corr_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Plot fit data:</strong> Drawing the original data and the fitting result together can easily check the analysis quality of the signal.</p>
 </li>
 <li><p><img alt="eval" src="../../images/ugimgs/scale_blue.svg" style="vertical-align:middle" width="20" height="20"> <strong>Autoscale</strong></p>

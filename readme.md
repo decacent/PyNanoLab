@@ -1,7 +1,6 @@
 ## PyNanoLab is an all-in-one GUI software for data analysis and visualization, expecially for nanopore analysis.
 ![PyNanoLab UI](https://pynanolab.com/images/1.png)
 
-You can get tutorials from the [PyNanoLab website](https://pynanolab.com).
 
 ## Installition
 In the version 3.X, binary installer (*.exe) is not provided anymore owing to the complex workflow and lost feature and performance.

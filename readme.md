@@ -21,18 +21,33 @@ PyNanoLab depend on th PySide6 to create its GUI. And it's not compatible with t
 
 use following command in a terminal:
 ```sh
-conda create -n pnl python=3.11.3  
+conda create -n pnl python=3.13.2  
 source activate
 conda activate pnl # activate the pnl environment.
 conda install numpy # optional, install the numpy-MKL to speed up the software.
 ```
-So, you have created a new python virtual environment and activated it.
-The name is pnl, and you can change the name to anything you want, and the python  version is specified to 3.11.3.
+Then, you should install [Pytorch](https://pytorch.org/) on this environment (Any version, you should select a version, GPU verison is more better). 
 
-### 2. Install the pynanolab by pip
-After version 3.x, we provide a pip package, you can directly install as general python packages.
+For example:
+``` sh
+# CPU 版本
+pip install torch torchvision torchaudio
+# 或者自行安装GPU版本
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+! warning: at windows, you should install hdbscan by manually compiling.
+For example using conda
+```shell
+conda install hdbscan -c conda-forge
+```
+If using pip, you should have c/c++ compiler on your system.
 
-If you can't get the package from pip on your system, such as the Apple M1 or other Linux. You can tyr to search and download the wheel file from our [Github release](https://github.com/decacent/PyNanoLab/releases) for your special OS.
+Now, you have created a new python virtual environment and activated it.
+The name is pnl, and you can change the name to anything you want, and the python  version is specified to >=3.11. (We recommend >=3.13.x)
+
+### 2. Install the pynanolab by pip   
+Then, you can directly install as general python packages.
+
 ```sh
 pip install pynanolab 
 ```
@@ -52,8 +67,6 @@ If you use the pip installtion. You can upgrade the packages manually using the 
 ```
 pip install --upgrade pynanolab
 ```
-
-For binary installation, such as the .exe in windows. If we don't provide a new exe file in the [sourceforge](https://sourceforge.net/projects/pynano/files/). You can manually download the *.whl file for your system from pypi or GitHub. Then, you can unzip the *.whl file use any compressed software (such as 7zip in Windows or unzip in Linux). And you will find the pynanolab folder in the archive. Delete the same "pynanolab" folder in the PATH that you installed the PyNanoLab and replace with the new package in the archive.
 
 ## Signal Extraction
 - Extract signal automaticall
